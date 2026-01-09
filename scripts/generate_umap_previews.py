@@ -148,7 +148,10 @@ def generate_2d_preview(decls, coords, out_path):
             distances.sort()
             for _, j in distances[:3]:
                 x2, y2 = norm_coords[j]
-                svg_lines.append(f'<line x1="{x1:.2f}" y1="{y1:.2f}" x2="{x2:.2f}" y2="{y2:.2f}" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>')
+                svg_lines.append(
+                    f'<line x1="{x1:.2f}" y1="{y1:.2f}" x2="{x2:.2f}" y2="{y2:.2f}" '
+                    f'stroke="#90a4ae" stroke-opacity="0.30" stroke-width="1.25"/>'
+                )
 
     # Add points
     for i, d in enumerate(decls):
@@ -223,36 +226,67 @@ def generate_3d_animated_preview(decls, coords_3d, out_path):
     center_y = margin + plot_height / 2
     scale = min(plot_width, plot_height) * 0.35
 
-    for i, d in enumerate(decls):
-        if len(coords_3d) > i:
-            x, y, z = coords_3d[i]
-        else:
-            x, y, z = 0, 0, 0
+    # Precompute projected (x,y) positions for each node at each frame.
+    n = len(decls)
+    pxs = [["0"] * (num_frames + 1) for _ in range(n)]
+    pys = [["0"] * (num_frames + 1) for _ in range(n)]
 
-        h, s, l = FAMILY_COLORS.get(d["family"], ("0", "0%", "58%"))
-        fill = f"hsl({h} {s} {l})"
+    for frame in range(num_frames):
+        angle = 2 * math.pi * frame / num_frames
+        ca = math.cos(angle)
+        sa = math.sin(angle)
 
-        # Calculate animated positions for rotation around Y axis
-        cx_values = []
-        cy_values = []
-        for frame in range(num_frames):
-            angle = 2 * math.pi * frame / num_frames
+        for i in range(n):
+            if len(coords_3d) > i:
+                x, y, z = coords_3d[i]
+            else:
+                x, y, z = 0, 0, 0
+
             # Rotate around Y axis
-            rx = x * math.cos(angle) + z * math.sin(angle)
-            rz = -x * math.sin(angle) + z * math.cos(angle)
+            rx = x * ca + z * sa
+            rz = -x * sa + z * ca
             # Project to 2D
             px = center_x + rx * scale
             py = center_y + y * scale - rz * scale * 0.3  # slight perspective
-            cx_values.append(f"{px:.2f}")
-            cy_values.append(f"{py:.2f}")
+            pxs[i][frame] = f"{px:.2f}"
+            pys[i][frame] = f"{py:.2f}"
 
-        cx_values.append(cx_values[0])  # loop back
-        cy_values.append(cy_values[0])
+    # loop back
+    for i in range(n):
+        pxs[i][num_frames] = pxs[i][0]
+        pys[i][num_frames] = pys[i][0]
+
+    # Add kNN edges in 3D space (keep this light for README render performance)
+    if HAS_NUMPY and len(coords_3d) >= 5:
+        k_nn = 2
+        edges = set()
+        pts = coords_3d
+        for i in range(n):
+            d2 = np.sum((pts - pts[i]) ** 2, axis=1)
+            d2[i] = float("inf")
+            nn = np.argsort(d2)[:k_nn]
+            for j in nn:
+                a, b = (i, int(j)) if i < int(j) else (int(j), i)
+                edges.add((a, b))
+
+        svg_lines.append('<g stroke="#90a4ae" stroke-opacity="0.22" stroke-width="1">')
+        for a, b in sorted(edges):
+            svg_lines.append(f'<line x1="{pxs[a][0]}" y1="{pys[a][0]}" x2="{pxs[b][0]}" y2="{pys[b][0]}">')
+            svg_lines.append(f'  <animate attributeName="x1" dur="{duration}s" repeatCount="indefinite" values="{";".join(pxs[a])}"/>')
+            svg_lines.append(f'  <animate attributeName="y1" dur="{duration}s" repeatCount="indefinite" values="{";".join(pys[a])}"/>')
+            svg_lines.append(f'  <animate attributeName="x2" dur="{duration}s" repeatCount="indefinite" values="{";".join(pxs[b])}"/>')
+            svg_lines.append(f'  <animate attributeName="y2" dur="{duration}s" repeatCount="indefinite" values="{";".join(pys[b])}"/>')
+            svg_lines.append('</line>')
+        svg_lines.append('</g>')
+
+    for i, d in enumerate(decls):
+        h, s, l = FAMILY_COLORS.get(d["family"], ("0", "0%", "58%"))
+        fill = f"hsl({h} {s} {l})"
 
         svg_lines.append(f'<circle r="4" fill="{fill}" stroke="#0b0f14" stroke-width="1">')
         svg_lines.append(f'  <title>{d["name"]}</title>')
-        svg_lines.append(f'  <animate attributeName="cx" dur="{duration}s" repeatCount="indefinite" values="{";".join(cx_values)}"/>')
-        svg_lines.append(f'  <animate attributeName="cy" dur="{duration}s" repeatCount="indefinite" values="{";".join(cy_values)}"/>')
+        svg_lines.append(f'  <animate attributeName="cx" dur="{duration}s" repeatCount="indefinite" values="{";".join(pxs[i])}"/>')
+        svg_lines.append(f'  <animate attributeName="cy" dur="{duration}s" repeatCount="indefinite" values="{";".join(pys[i])}"/>')
         svg_lines.append('</circle>')
 
     svg_lines.append('</svg>')
