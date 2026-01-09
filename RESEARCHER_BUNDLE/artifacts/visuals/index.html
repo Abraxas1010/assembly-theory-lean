@@ -1,172 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assembly Theory Visualizations</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Assembly Theory — Visuals</title>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            min-height: 100vh;
-            color: #e8e8e8;
-            padding: 40px 20px;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 10px;
-            font-size: 2.5em;
-            background: linear-gradient(90deg, #3498db, #2ecc71);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .subtitle {
-            text-align: center;
-            color: #888;
-            margin-bottom: 40px;
-            font-size: 1.1em;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-        }
-        .card {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 16px;
-            overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-        .card a {
-            text-decoration: none;
-            color: inherit;
-        }
-        .card-image {
-            width: 100%;
-            height: 200px;
-            object-fit: contain;
-            background: rgba(0, 0, 0, 0.2);
-            padding: 20px;
-        }
-        .card-content {
-            padding: 20px;
-        }
-        .card-title {
-            font-size: 1.3em;
-            margin-bottom: 8px;
-            color: #3498db;
-        }
-        .card-desc {
-            color: #aaa;
-            font-size: 0.95em;
-            line-height: 1.5;
-        }
-        .badge {
-            display: inline-block;
-            background: rgba(52, 152, 219, 0.2);
-            color: #3498db;
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 0.8em;
-            margin-top: 10px;
-        }
-        footer {
-            text-align: center;
-            margin-top: 60px;
-            color: #666;
-            font-size: 0.9em;
-        }
-        footer a {
-            color: #3498db;
-        }
+      :root { color-scheme: dark; }
+      body {
+        margin: 0;
+        font: 14px/1.4 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+        background: #0b0f14;
+        color: #e6eef7;
+      }
+      a { color: #8ab4f8; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      .wrap { max-width: 920px; margin: 0 auto; padding: 28px 18px; }
+      .card { background: #0f1721; border: 1px solid #1c2a3a; border-radius: 12px; padding: 16px 18px; }
+      .grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+      @media (min-width: 760px) { .grid { grid-template-columns: 1fr 1fr; } }
+      .muted { color: #b8c7d9; }
+      code { background: #0b1320; border: 1px solid #1c2a3a; border-radius: 6px; padding: 2px 6px; }
+      img { max-width: 100%; border: 1px solid #1c2a3a; border-radius: 10px; }
+      h1 { color: #fff; }
+      h2 { color: #e6eef7; margin-top: 0; }
+      ul { margin: 0; padding-left: 1.25rem; }
     </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Assembly Theory Visualizations</h1>
-        <p class="subtitle">
-            Machine-checked formalization of "The Physics of Causation"
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>Assembly Theory — Visuals</h1>
+      <p class="muted">
+        Proof/declaration maps (UMAP), import graphs, and supporting diagrams for the
+        <code>HeytingLean.ATheory</code> slice.
+      </p>
+
+      <div class="card" style="margin-bottom:12px">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="../../README_VERIFY.md">Verification instructions</a></li>
+          <li><a href="../../../README.md">PaperPack README</a></li>
+        </ul>
+        <p class="muted" style="margin-bottom:0">
+          Data sources: <code>assembly_proofs_data.js</code> (interactive maps), <code>assembly_graph.json</code> (module/declaration index).
         </p>
+      </div>
 
-        <div class="grid">
-            <div class="card">
-                <a href="assembly_2d.html">
-                    <img src="assembly_2d_preview.svg" alt="2D UMAP" class="card-image">
-                    <div class="card-content">
-                        <h3 class="card-title">2D Proof Map</h3>
-                        <p class="card-desc">
-                            UMAP projection of Assembly Theory declarations. Explore theorems,
-                            lemmas, and definitions in an interactive 2D space.
-                        </p>
-                        <span class="badge">Interactive</span>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="assembly_3d.html">
-                    <img src="assembly_3d_preview.svg" alt="3D UMAP" class="card-image">
-                    <div class="card-content">
-                        <h3 class="card-title">3D Proof Map</h3>
-                        <p class="card-desc">
-                            Three-dimensional UMAP embedding. Rotate, zoom, and explore
-                            proof clusters from any angle.
-                        </p>
-                        <span class="badge">Interactive</span>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="dependency_graph.svg">
-                    <img src="dependency_graph.svg" alt="Dependency Graph" class="card-image">
-                    <div class="card-content">
-                        <h3 class="card-title">Module Dependencies</h3>
-                        <p class="card-desc">
-                            Import graph showing how Assembly Theory modules depend on
-                            each other. Core → Paths → Index → Bounds → Extensions.
-                        </p>
-                        <span class="badge">SVG</span>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="bounds_diagram.svg">
-                    <img src="bounds_diagram.svg" alt="Bounds Diagram" class="card-image">
-                    <div class="card-content">
-                        <h3 class="card-title">Assembly Index Bounds</h3>
-                        <p class="card-desc">
-                            Visual representation of the proven bounds:
-                            log₂(size) ≤ AI ≤ size - 1
-                        </p>
-                        <span class="badge">SVG</span>
-                    </div>
-                </a>
-            </div>
+      <div class="grid">
+        <div class="card">
+          <h2>2D Proof Map</h2>
+          <p class="muted">Pan/zoom, hover for names, click for details.</p>
+          <p>
+            <a href="./assembly_2d.html"><img src="./assembly_2d_preview.svg" alt="UMAP 2D preview" /></a>
+          </p>
+          <p><a href="./assembly_2d.html">Open <code>assembly_2d.html</code></a></p>
         </div>
+        <div class="card">
+          <h2>3D Proof Map</h2>
+          <p class="muted">Drag to rotate, wheel to zoom, hover/click nodes.</p>
+          <div style="margin: 0.5rem 0 0.75rem">
+            <iframe
+              src="./assembly_3d.html?embed=1&spin=1"
+              title="UMAP 3D interactive preview"
+              style="width: 100%; height: 320px; border: 1px solid #1c2a3a; border-radius: 10px"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <p class="muted">If WebGL is unavailable: <a href="./assembly_3d_preview.svg">static preview</a>.</p>
+          <p><a href="./assembly_3d.html">Open <code>assembly_3d.html</code></a></p>
+        </div>
+      </div>
 
-        <footer>
-            <p>
-                Part of the <a href="https://apoth3osis.io">HeytingLean</a> project
-                &nbsp;|&nbsp;
-                <a href="../../README.md">Back to README</a>
-            </p>
-        </footer>
+      <div class="grid" style="margin-top:12px">
+        <div class="card">
+          <h2>Assembly Index Bounds</h2>
+          <p class="muted">Diagram summary of <code>log₂(size) ≤ AI ≤ size − 1</code>.</p>
+          <p>
+            <a href="./bounds_diagram.svg"><img src="./bounds_diagram.svg" alt="Assembly index bounds diagram" /></a>
+          </p>
+        </div>
+        <div class="card">
+          <h2>Module Dependencies</h2>
+          <p class="muted">Import graph across the <code>HeytingLean.ATheory</code> modules included in this PaperPack.</p>
+          <p>
+            <a href="./dependency_graph.svg"><img src="./dependency_graph.svg" alt="Module dependency graph" /></a>
+          </p>
+          <p class="muted" style="margin-bottom:0">
+            Source: <code>dependency_graph.dot</code>.
+          </p>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

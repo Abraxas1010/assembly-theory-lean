@@ -1,23 +1,33 @@
 digraph AssemblyTheory {
   rankdir=TB;
   node [shape=box, style=filled, fillcolor=lightblue];
-  subgraph cluster_Paper {
-    label="Paper";
-    "Paper.AssemblyPath" [label="AssemblyPath"];
-    "Paper.AssemblyQuotient" [label="AssemblyQuotient"];
-    "Paper.AssemblyIndex" [label="AssemblyIndex"];
-    "Paper.AssemblyBounds" [label="AssemblyBounds"];
-    "Paper.StringPermSpace" [label="StringPermSpace"];
-    "Paper.HypergraphSpace" [label="HypergraphSpace"];
-    "Paper.AssemblySpace" [label="AssemblySpace"];
-    "Paper.MolecularSpace" [label="MolecularSpace"];
+  subgraph cluster_HeytingLean_ATheory_AssemblyCore {
+    label="HeytingLean.ATheory.AssemblyCore";
+    "HeytingLean.ATheory.AssemblyCore" [label="AssemblyCore"];
   }
-  subgraph cluster_CopyNumberSelection {
-    label="CopyNumberSelection";
-    "CopyNumberSelection" [label="CopyNumberSelection"];
+  subgraph cluster_HeytingLean_ATheory_CopyNumberSelection {
+    label="HeytingLean.ATheory.CopyNumberSelection";
+    "HeytingLean.ATheory.CopyNumberSelection" [label="CopyNumberSelection"];
   }
-  subgraph cluster_AssemblyCore {
-    label="AssemblyCore";
-    "AssemblyCore" [label="AssemblyCore"];
+  subgraph cluster_HeytingLean_ATheory_Paper {
+    label="HeytingLean.ATheory.Paper";
+    "HeytingLean.ATheory.Paper.AssemblyBounds" [label="AssemblyBounds"];
+    "HeytingLean.ATheory.Paper.AssemblyIndex" [label="AssemblyIndex"];
+    "HeytingLean.ATheory.Paper.AssemblyPath" [label="AssemblyPath"];
+    "HeytingLean.ATheory.Paper.AssemblyQuotient" [label="AssemblyQuotient"];
+    "HeytingLean.ATheory.Paper.AssemblySpace" [label="AssemblySpace"];
+    "HeytingLean.ATheory.Paper.HypergraphSpace" [label="HypergraphSpace"];
+    "HeytingLean.ATheory.Paper.MolecularSpace" [label="MolecularSpace"];
+    "HeytingLean.ATheory.Paper.StringPermSpace" [label="StringPermSpace"];
   }
+  "HeytingLean.ATheory.Paper.AssemblyIndex" -> "HeytingLean.ATheory.Paper.HypergraphSpace";
+  "HeytingLean.ATheory.Paper.AssemblyIndex" -> "HeytingLean.ATheory.Paper.AssemblyBounds";
+  "HeytingLean.ATheory.AssemblyCore" -> "HeytingLean.ATheory.Paper.MolecularSpace";
+  "HeytingLean.ATheory.Paper.AssemblyIndex" -> "HeytingLean.ATheory.Paper.MolecularSpace";
+  "HeytingLean.ATheory.Paper.AssemblyQuotient" -> "HeytingLean.ATheory.Paper.MolecularSpace";
+  "HeytingLean.ATheory.Paper.AssemblyPath" -> "HeytingLean.ATheory.Paper.AssemblyIndex";
+  "HeytingLean.ATheory.AssemblyCore" -> "HeytingLean.ATheory.Paper.AssemblyIndex";
+  "HeytingLean.ATheory.Paper.AssemblyIndex" -> "HeytingLean.ATheory.Paper.StringPermSpace";
+  "HeytingLean.ATheory.Paper.AssemblyIndex" -> "HeytingLean.ATheory.Paper.AssemblyQuotient";
+  "HeytingLean.ATheory.Paper.AssemblySpace" -> "HeytingLean.ATheory.Paper.AssemblyPath";
 }

@@ -1,1046 +1,1708 @@
 {
   "nodes": [
     {
-      "id": "Paper.AssemblyPath",
-      "name": "Paper.AssemblyPath",
+      "id": "HeytingLean.ATheory.AssemblyCore",
+      "name": "HeytingLean.ATheory.AssemblyCore",
       "type": "module"
     },
     {
-      "id": "Paper.AssemblyQuotient",
-      "name": "Paper.AssemblyQuotient",
+      "id": "HeytingLean.ATheory.CopyNumberSelection",
+      "name": "HeytingLean.ATheory.CopyNumberSelection",
       "type": "module"
     },
     {
-      "id": "Paper.AssemblyIndex",
-      "name": "Paper.AssemblyIndex",
+      "id": "HeytingLean.ATheory.Paper.AssemblyBounds",
+      "name": "HeytingLean.ATheory.Paper.AssemblyBounds",
       "type": "module"
     },
     {
-      "id": "Paper.AssemblyBounds",
-      "name": "Paper.AssemblyBounds",
+      "id": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "name": "HeytingLean.ATheory.Paper.AssemblyIndex",
       "type": "module"
     },
     {
-      "id": "Paper.StringPermSpace",
-      "name": "Paper.StringPermSpace",
+      "id": "HeytingLean.ATheory.Paper.AssemblyPath",
+      "name": "HeytingLean.ATheory.Paper.AssemblyPath",
       "type": "module"
     },
     {
-      "id": "CopyNumberSelection",
-      "name": "CopyNumberSelection",
+      "id": "HeytingLean.ATheory.Paper.AssemblyQuotient",
+      "name": "HeytingLean.ATheory.Paper.AssemblyQuotient",
       "type": "module"
     },
     {
-      "id": "AssemblyCore",
-      "name": "AssemblyCore",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace",
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace",
       "type": "module"
     },
     {
-      "id": "Paper.HypergraphSpace",
-      "name": "Paper.HypergraphSpace",
+      "id": "HeytingLean.ATheory.Paper.HypergraphSpace",
+      "name": "HeytingLean.ATheory.Paper.HypergraphSpace",
       "type": "module"
     },
     {
-      "id": "Paper.AssemblySpace",
-      "name": "Paper.AssemblySpace",
+      "id": "HeytingLean.ATheory.Paper.MolecularSpace",
+      "name": "HeytingLean.ATheory.Paper.MolecularSpace",
       "type": "module"
     },
     {
-      "id": "Paper.MolecularSpace",
-      "name": "Paper.MolecularSpace",
+      "id": "HeytingLean.ATheory.Paper.StringPermSpace",
+      "name": "HeytingLean.ATheory.Paper.StringPermSpace",
       "type": "module"
     }
   ],
   "edges": [
     {
       "source": "HeytingLean.ATheory.Paper.AssemblyIndex",
-      "target": "Paper.HypergraphSpace"
+      "target": "HeytingLean.ATheory.Paper.HypergraphSpace"
     },
     {
       "source": "HeytingLean.ATheory.Paper.AssemblyIndex",
-      "target": "Paper.AssemblyBounds"
+      "target": "HeytingLean.ATheory.Paper.AssemblyBounds"
     },
     {
       "source": "HeytingLean.ATheory.AssemblyCore",
-      "target": "Paper.MolecularSpace"
+      "target": "HeytingLean.ATheory.Paper.MolecularSpace"
     },
     {
       "source": "HeytingLean.ATheory.Paper.AssemblyIndex",
-      "target": "Paper.MolecularSpace"
+      "target": "HeytingLean.ATheory.Paper.MolecularSpace"
     },
     {
       "source": "HeytingLean.ATheory.Paper.AssemblyQuotient",
-      "target": "Paper.MolecularSpace"
+      "target": "HeytingLean.ATheory.Paper.MolecularSpace"
     },
     {
       "source": "HeytingLean.ATheory.Paper.AssemblyPath",
-      "target": "Paper.AssemblyIndex"
+      "target": "HeytingLean.ATheory.Paper.AssemblyIndex"
     },
     {
       "source": "HeytingLean.ATheory.AssemblyCore",
-      "target": "Paper.AssemblyIndex"
+      "target": "HeytingLean.ATheory.Paper.AssemblyIndex"
     },
     {
       "source": "HeytingLean.ATheory.Paper.AssemblyIndex",
-      "target": "Paper.StringPermSpace"
+      "target": "HeytingLean.ATheory.Paper.StringPermSpace"
     },
     {
       "source": "HeytingLean.ATheory.Paper.AssemblyIndex",
-      "target": "Paper.AssemblyQuotient"
+      "target": "HeytingLean.ATheory.Paper.AssemblyQuotient"
     },
     {
       "source": "HeytingLean.ATheory.Paper.AssemblySpace",
-      "target": "Paper.AssemblyPath"
+      "target": "HeytingLean.ATheory.Paper.AssemblyPath"
     }
   ],
   "declarations": [
     {
-      "name": "CopyNumberSelection.monotone_in_mu",
-      "kind": "lemma",
-      "module": "CopyNumberSelection",
-      "file": "CopyNumberSelection.lean"
-    },
-    {
-      "name": "CopyNumberSelection.monotone_in_idx",
-      "kind": "lemma",
-      "module": "CopyNumberSelection",
-      "file": "CopyNumberSelection.lean"
-    },
-    {
-      "name": "CopyNumberSelection.mono_in_Theta",
-      "kind": "lemma",
-      "module": "CopyNumberSelection",
-      "file": "CopyNumberSelection.lean"
-    },
-    {
-      "name": "CopyNumberSelection.mono_in_tau",
-      "kind": "lemma",
-      "module": "CopyNumberSelection",
-      "file": "CopyNumberSelection.lean"
-    },
-    {
-      "name": "CopyNumberSelection.AssemblyEnsemble_empty",
-      "kind": "lemma",
-      "module": "CopyNumberSelection",
-      "file": "CopyNumberSelection.lean"
-    },
-    {
-      "name": "CopyNumberSelection.AssemblyEnsemble_zero_total",
-      "kind": "lemma",
-      "module": "CopyNumberSelection",
-      "file": "CopyNumberSelection.lean"
-    },
-    {
-      "name": "CopyNumberSelection.nullTail",
-      "kind": "def",
-      "module": "CopyNumberSelection",
-      "file": "CopyNumberSelection.lean"
-    },
-    {
-      "name": "CopyNumberSelection.Assembly",
-      "kind": "def",
-      "module": "CopyNumberSelection",
-      "file": "CopyNumberSelection.lean"
-    },
-    {
-      "name": "CopyNumberSelection.selected",
-      "kind": "def",
-      "module": "CopyNumberSelection",
-      "file": "CopyNumberSelection.lean"
-    },
-    {
-      "name": "CopyNumberSelection.AssemblyEnsemble",
-      "kind": "def",
-      "module": "CopyNumberSelection",
-      "file": "CopyNumberSelection.lean"
-    },
-    {
-      "name": "CopyNumberSelection.CopyNumber",
+      "name": "HeytingLean.ATheory.Alphabet",
+      "id": "HeytingLean.ATheory.Alphabet",
       "kind": "structure",
-      "module": "CopyNumberSelection",
-      "file": "CopyNumberSelection.lean"
+      "module": "HeytingLean.ATheory.AssemblyCore",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/AssemblyCore.lean",
+      "line": 25,
+      "family": "Core",
+      "snippet": "structure Alphabet (\u03b1 : Type u) where\n  basis : Finset \u03b1\n\n/-- Binary assembly rule set: given two parts, return the finite set of\nadmissible composites. -/\nstructure Rules (\u03b1 : Type u) where"
     },
     {
-      "name": "AssemblyCore.dagJoinCount_le_joinCount",
-      "kind": "theorem",
-      "module": "AssemblyCore",
-      "file": "AssemblyCore.lean"
-    },
-    {
-      "name": "AssemblyCore.isJoin_iff",
-      "kind": "lemma",
-      "module": "AssemblyCore",
-      "file": "AssemblyCore.lean"
-    },
-    {
-      "name": "AssemblyCore.trivial_len",
-      "kind": "lemma",
-      "module": "AssemblyCore",
-      "file": "AssemblyCore.lean"
-    },
-    {
-      "name": "AssemblyCore.subobjects",
-      "kind": "def",
-      "module": "AssemblyCore",
-      "file": "AssemblyCore.lean"
-    },
-    {
-      "name": "AssemblyCore.isJoin",
-      "kind": "def",
-      "module": "AssemblyCore",
-      "file": "AssemblyCore.lean"
-    },
-    {
-      "name": "AssemblyCore.joinCount",
-      "kind": "def",
-      "module": "AssemblyCore",
-      "file": "AssemblyCore.lean"
-    },
-    {
-      "name": "AssemblyCore.dagJoinCount",
-      "kind": "def",
-      "module": "AssemblyCore",
-      "file": "AssemblyCore.lean"
-    },
-    {
-      "name": "AssemblyCore.trivial",
-      "kind": "def",
-      "module": "AssemblyCore",
-      "file": "AssemblyCore.lean"
-    },
-    {
-      "name": "AssemblyCore.canonicalPath",
-      "kind": "def",
-      "module": "AssemblyCore",
-      "file": "AssemblyCore.lean"
-    },
-    {
-      "name": "AssemblyCore.assemblyIndex",
-      "kind": "def",
-      "module": "AssemblyCore",
-      "file": "AssemblyCore.lean"
-    },
-    {
-      "name": "AssemblyCore.birthAT",
-      "kind": "def",
-      "module": "AssemblyCore",
-      "file": "AssemblyCore.lean"
-    },
-    {
-      "name": "AssemblyCore.Alphabet",
+      "name": "HeytingLean.ATheory.Rules",
+      "id": "HeytingLean.ATheory.Rules",
       "kind": "structure",
-      "module": "AssemblyCore",
-      "file": "AssemblyCore.lean"
+      "module": "HeytingLean.ATheory.AssemblyCore",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/AssemblyCore.lean",
+      "line": 30,
+      "family": "Core",
+      "snippet": "structure Rules (\u03b1 : Type u) where\n  compose : \u03b1 \u2192 \u03b1 \u2192 Finset \u03b1\n\n/-- Abstract syntax of assembly objects built from primitive parts. -/\ninductive Obj (\u03b1 : Type u) where\n  | base : \u03b1 \u2192 Obj \u03b1"
     },
     {
-      "name": "AssemblyCore.Rules",
-      "kind": "structure",
-      "module": "AssemblyCore",
-      "file": "AssemblyCore.lean"
-    },
-    {
-      "name": "AssemblyCore.Path",
-      "kind": "structure",
-      "module": "AssemblyCore",
-      "file": "AssemblyCore.lean"
-    },
-    {
-      "name": "AssemblyCore.Obj",
+      "name": "HeytingLean.ATheory.Obj",
+      "id": "HeytingLean.ATheory.Obj",
       "kind": "inductive",
-      "module": "AssemblyCore",
-      "file": "AssemblyCore.lean"
+      "module": "HeytingLean.ATheory.AssemblyCore",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/AssemblyCore.lean",
+      "line": 34,
+      "family": "Core",
+      "snippet": "inductive Obj (\u03b1 : Type u) where\n  | base : \u03b1 \u2192 Obj \u03b1\n  | join : Obj \u03b1 \u2192 Obj \u03b1 \u2192 Obj \u03b1\nderiving Repr, DecidableEq\n\nnamespace Obj"
     },
     {
-      "name": "Paper.HypergraphSpace.hyperIndex_spec",
-      "kind": "lemma",
-      "module": "Paper.HypergraphSpace",
-      "file": "Paper/HypergraphSpace.lean"
-    },
-    {
-      "name": "Paper.HypergraphSpace.hyperIndex_le_of_hasLen",
-      "kind": "lemma",
-      "module": "Paper.HypergraphSpace",
-      "file": "Paper/HypergraphSpace.lean"
-    },
-    {
-      "name": "Paper.HypergraphSpace.hyperIndex_le_of_path",
-      "kind": "lemma",
-      "module": "Paper.HypergraphSpace",
-      "file": "Paper/HypergraphSpace.lean"
-    },
-    {
-      "name": "Paper.HypergraphSpace.toAssemblySpace_ofAssemblySpace",
-      "kind": "lemma",
-      "module": "Paper.HypergraphSpace",
-      "file": "Paper/HypergraphSpace.lean"
-    },
-    {
-      "name": "Paper.HypergraphSpace.hyperIndex_ofAssemblySpace_eq",
-      "kind": "lemma",
-      "module": "Paper.HypergraphSpace",
-      "file": "Paper/HypergraphSpace.lean"
-    },
-    {
-      "name": "Paper.HypergraphSpace.toAssemblySpace",
+      "name": "HeytingLean.ATheory.Obj.subobjects",
+      "id": "HeytingLean.ATheory.Obj.subobjects",
       "kind": "def",
-      "module": "Paper.HypergraphSpace",
-      "file": "Paper/HypergraphSpace.lean"
+      "module": "HeytingLean.ATheory.AssemblyCore",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/AssemblyCore.lean",
+      "line": 47,
+      "family": "Core",
+      "snippet": "def subobjects [DecidableEq \u03b1] : Obj \u03b1 \u2192 Finset (Obj \u03b1)\n  | base a => {base a}\n  | join x y => insert (join x y) (subobjects x \u222a subobjects y)\n\n/-- Predicate: the object is a `join` node. -/\ndef isJoin : Obj \u03b1 \u2192 Bool"
     },
     {
-      "name": "Paper.HypergraphSpace.HasHyperPathLen",
+      "name": "HeytingLean.ATheory.Obj.isJoin",
+      "id": "HeytingLean.ATheory.Obj.isJoin",
       "kind": "def",
-      "module": "Paper.HypergraphSpace",
-      "file": "Paper/HypergraphSpace.lean"
+      "module": "HeytingLean.ATheory.AssemblyCore",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/AssemblyCore.lean",
+      "line": 52,
+      "family": "Core",
+      "snippet": "def isJoin : Obj \u03b1 \u2192 Bool\n  | base _ => false\n  | join _ _ => true\n\nlemma isJoin_iff {o : Obj \u03b1} : isJoin o = true \u2194 (\u2203 x y, o = join x y) := by\n  cases o <;> simp [isJoin]"
     },
     {
-      "name": "Paper.HypergraphSpace.hyperIndex",
+      "name": "HeytingLean.ATheory.Obj.isJoin_iff",
+      "id": "HeytingLean.ATheory.Obj.isJoin_iff",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.AssemblyCore",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/AssemblyCore.lean",
+      "line": 56,
+      "family": "Core",
+      "snippet": "lemma isJoin_iff {o : Obj \u03b1} : isJoin o = true \u2194 (\u2203 x y, o = join x y) := by\n  cases o <;> simp [isJoin]\n\n/-- Count the number of join-nodes in an object as a simple structural size\nmeasure. This is a fallback notion of length when no explicit path is given. -/\ndef joinCount : Obj \u03b1 \u2192 Nat"
+    },
+    {
+      "name": "HeytingLean.ATheory.Obj.joinCount",
+      "id": "HeytingLean.ATheory.Obj.joinCount",
       "kind": "def",
-      "module": "Paper.HypergraphSpace",
-      "file": "Paper/HypergraphSpace.lean"
+      "module": "HeytingLean.ATheory.AssemblyCore",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/AssemblyCore.lean",
+      "line": 61,
+      "family": "Core",
+      "snippet": "def joinCount : Obj \u03b1 \u2192 Nat\n  | base _    => 0\n  | join x y  => joinCount x + joinCount y + 1\n\n/-- Reuse-aware join count: count the number of *distinct* `join` subobjects."
     },
     {
-      "name": "Paper.HypergraphSpace.ofAssemblySpace",
+      "name": "HeytingLean.ATheory.Obj.dagJoinCount",
+      "id": "HeytingLean.ATheory.Obj.dagJoinCount",
       "kind": "def",
-      "module": "Paper.HypergraphSpace",
-      "file": "Paper/HypergraphSpace.lean"
+      "module": "HeytingLean.ATheory.AssemblyCore",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/AssemblyCore.lean",
+      "line": 73,
+      "family": "Core",
+      "snippet": "def dagJoinCount [DecidableEq \u03b1] (o : Obj \u03b1) : Nat :=\n  ((subobjects o).filter (fun t => isJoin t)).card\n\ntheorem dagJoinCount_le_joinCount [DecidableEq \u03b1] (o : Obj \u03b1) :\n    dagJoinCount o \u2264 joinCount o := by\n  classical"
     },
     {
-      "name": "Paper.HypergraphSpace.Graph",
-      "kind": "structure",
-      "module": "Paper.HypergraphSpace",
-      "file": "Paper/HypergraphSpace.lean"
-    },
-    {
-      "name": "Paper.AssemblyBounds.size_base",
-      "kind": "lemma",
-      "module": "Paper.AssemblyBounds",
-      "file": "Paper/AssemblyBounds.lean"
-    },
-    {
-      "name": "Paper.AssemblyBounds.size_join",
-      "kind": "lemma",
-      "module": "Paper.AssemblyBounds",
-      "file": "Paper/AssemblyBounds.lean"
-    },
-    {
-      "name": "Paper.AssemblyBounds.size_pos",
-      "kind": "lemma",
-      "module": "Paper.AssemblyBounds",
-      "file": "Paper/AssemblyBounds.lean"
-    },
-    {
-      "name": "Paper.AssemblyBounds.size_eq_joinCount_add_one",
-      "kind": "lemma",
-      "module": "Paper.AssemblyBounds",
-      "file": "Paper/AssemblyBounds.lean"
-    },
-    {
-      "name": "Paper.AssemblyBounds.assemblyIndex_le_size_sub_one",
-      "kind": "lemma",
-      "module": "Paper.AssemblyBounds",
-      "file": "Paper/AssemblyBounds.lean"
-    },
-    {
-      "name": "Paper.AssemblyBounds.size_le_mul_pow_two_availableAfter",
-      "kind": "lemma",
-      "module": "Paper.AssemblyBounds",
-      "file": "Paper/AssemblyBounds.lean"
-    },
-    {
-      "name": "Paper.AssemblyBounds.size_le_pow_two_availableAfterU",
-      "kind": "lemma",
-      "module": "Paper.AssemblyBounds",
-      "file": "Paper/AssemblyBounds.lean"
-    },
-    {
-      "name": "Paper.AssemblyBounds.assemblyIndex_ge_log2",
-      "kind": "lemma",
-      "module": "Paper.AssemblyBounds",
-      "file": "Paper/AssemblyBounds.lean"
-    },
-    {
-      "name": "Paper.AssemblyBounds.dagJoinCount_bounds",
-      "kind": "lemma",
-      "module": "Paper.AssemblyBounds",
-      "file": "Paper/AssemblyBounds.lean"
-    },
-    {
-      "name": "Paper.AssemblyBounds.greedyIndex_ge_assemblyIndex",
-      "kind": "lemma",
-      "module": "Paper.AssemblyBounds",
-      "file": "Paper/AssemblyBounds.lean"
-    },
-    {
-      "name": "Paper.AssemblyBounds.size",
-      "kind": "def",
-      "module": "Paper.AssemblyBounds",
-      "file": "Paper/AssemblyBounds.lean"
-    },
-    {
-      "name": "Paper.AssemblyBounds.greedyIndex",
-      "kind": "def",
-      "module": "Paper.AssemblyBounds",
-      "file": "Paper/AssemblyBounds.lean"
-    },
-    {
-      "name": "Paper.MolecularSpace.evalIsoRel_refl",
+      "name": "HeytingLean.ATheory.Obj.dagJoinCount_le_joinCount",
+      "id": "HeytingLean.ATheory.Obj.dagJoinCount_le_joinCount",
       "kind": "theorem",
-      "module": "Paper.MolecularSpace",
-      "file": "Paper/MolecularSpace.lean"
+      "module": "HeytingLean.ATheory.AssemblyCore",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/AssemblyCore.lean",
+      "line": 76,
+      "family": "Core",
+      "snippet": "theorem dagJoinCount_le_joinCount [DecidableEq \u03b1] (o : Obj \u03b1) :\n    dagJoinCount o \u2264 joinCount o := by\n  classical\n  induction o with\n  | base a =>\n      simp [dagJoinCount, subobjects, isJoin, joinCount]"
     },
     {
-      "name": "Paper.MolecularSpace.evalIsoRel_symm",
+      "name": "HeytingLean.ATheory.Path",
+      "id": "HeytingLean.ATheory.Path",
+      "kind": "structure",
+      "module": "HeytingLean.ATheory.AssemblyCore",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/AssemblyCore.lean",
+      "line": 146,
+      "family": "Core",
+      "snippet": "structure Path (\u03b1 : Type u) (R : Rules \u03b1) (target : Obj \u03b1) where\n  nodes : List (Obj \u03b1)\n  /-- For every adjacent pair `p, q` in the node list, there are primitive\n  parts `a, b` and a composite `c` such that `p` is the join of the bases\n  of `a` and `b`, `q` is the base of `c`, and `c` appears in `R.compose a b`. -/\n  wellFormed :"
+    },
+    {
+      "name": "HeytingLean.ATheory.Path.trivial",
+      "id": "HeytingLean.ATheory.Path.trivial",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.AssemblyCore",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/AssemblyCore.lean",
+      "line": 166,
+      "family": "Core",
+      "snippet": "def trivial (o : Obj \u03b1) : Path \u03b1 R o where\n  nodes := [o]\n  wellFormed := by\n    intro p q hmem\n    -- There are no adjacent pairs in a singleton list.\n    simp [List.zip, List.tail] at hmem"
+    },
+    {
+      "name": "HeytingLean.ATheory.Path.trivial_len",
+      "id": "HeytingLean.ATheory.Path.trivial_len",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.AssemblyCore",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/AssemblyCore.lean",
+      "line": 173,
+      "family": "Core",
+      "snippet": "@[simp] lemma trivial_len (o : Obj \u03b1) :\n    (trivial (R := R) o).len = 1 := rfl\n\nend Path\n\n/-- Canonical assembly path for an object, built purely from its syntax."
+    },
+    {
+      "name": "HeytingLean.ATheory.canonicalPath",
+      "id": "HeytingLean.ATheory.canonicalPath",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.AssemblyCore",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/AssemblyCore.lean",
+      "line": 183,
+      "family": "Core",
+      "snippet": "def canonicalPath {\u03b1 : Type u} [DecidableEq \u03b1] (R : Rules \u03b1) (o : Obj \u03b1) : Path \u03b1 R o where\n  nodes := [o]\n  wellFormed := by\n    intro p q hmem\n    -- As in `trivial`, there are no adjacent pairs in a singleton list.\n    simp [List.zip, List.tail] at hmem"
+    },
+    {
+      "name": "HeytingLean.ATheory.assemblyIndex",
+      "id": "HeytingLean.ATheory.assemblyIndex",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.AssemblyCore",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/AssemblyCore.lean",
+      "line": 195,
+      "family": "Core",
+      "snippet": "def assemblyIndex {\u03b1 : Type u} [DecidableEq \u03b1] (R : Rules \u03b1) (o : Obj \u03b1) : Nat :=\n  (canonicalPath (R := R) o).len\n\n/-- Alias exposing the assembly index as the \u201cbirth-time\u201d of an object in the\nAssembly Theory layer. -/\ndef birthAT {\u03b1 : Type u} [DecidableEq \u03b1] (R : Rules \u03b1) (o : Obj \u03b1) : Nat :="
+    },
+    {
+      "name": "HeytingLean.ATheory.birthAT",
+      "id": "HeytingLean.ATheory.birthAT",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.AssemblyCore",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/AssemblyCore.lean",
+      "line": 200,
+      "family": "Core",
+      "snippet": "def birthAT {\u03b1 : Type u} [DecidableEq \u03b1] (R : Rules \u03b1) (o : Obj \u03b1) : Nat :=\n  assemblyIndex R o\n\nend ATheory\nend HeytingLean"
+    },
+    {
+      "name": "HeytingLean.ATheory.CopyNumber",
+      "id": "HeytingLean.ATheory.CopyNumber",
+      "kind": "structure",
+      "module": "HeytingLean.ATheory.CopyNumberSelection",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/CopyNumberSelection.lean",
+      "line": 28,
+      "family": "Selection",
+      "snippet": "structure CopyNumber (V : Type u) where\n  /-- Raw counts for each object. -/\n  n : V \u2192 Nat\n  /-- A secondary weight or normalized proxy (e.g. coarse-grained copy number). -/\n  \u03bc : V \u2192 Nat"
+    },
+    {
+      "name": "HeytingLean.ATheory.nullTail",
+      "id": "HeytingLean.ATheory.nullTail",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.CopyNumberSelection",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/CopyNumberSelection.lean",
+      "line": 39,
+      "family": "Selection",
+      "snippet": "noncomputable def nullTail (\u03b8 : Nat) : \u211d :=\n  1 / (\u03b8.succ : \u211d)\n\n/-- Assembly functional combining assembly index and copy number. For an object\n`v` with index `idx v` and discrete weight `\u03bc v`, we define"
+    },
+    {
+      "name": "HeytingLean.ATheory.Assembly",
+      "id": "HeytingLean.ATheory.Assembly",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.CopyNumberSelection",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/CopyNumberSelection.lean",
+      "line": 49,
+      "family": "Selection",
+      "snippet": "noncomputable def Assembly (idx : V \u2192 Nat) (\u03bc : V \u2192 Nat) (v : V) : \u211d :=\n  (\u03bc v : \u211d) * (idx v + 1 : \u211d)\n\nnamespace Assembly\n\nvariable (idx : V \u2192 Nat) (\u03bc : V \u2192 Nat)"
+    },
+    {
+      "name": "HeytingLean.ATheory.Assembly.monotone_in_mu",
+      "id": "HeytingLean.ATheory.Assembly.monotone_in_mu",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.CopyNumberSelection",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/CopyNumberSelection.lean",
+      "line": 57,
+      "family": "Selection",
+      "snippet": "lemma monotone_in_mu {v : V} {\u03bc\u2081 \u03bc\u2082 : V \u2192 Nat}\n    (h\u03bc : \u03bc\u2081 v \u2264 \u03bc\u2082 v) :\n    Assembly idx \u03bc\u2081 v \u2264 Assembly idx \u03bc\u2082 v := by\n  unfold Assembly\n  have hcoe : (\u03bc\u2081 v : \u211d) \u2264 (\u03bc\u2082 v : \u211d) := by exact_mod_cast h\u03bc\n  have hden : 0 \u2264 (idx v + 1 : \u211d) := by"
+    },
+    {
+      "name": "HeytingLean.ATheory.Assembly.monotone_in_idx",
+      "id": "HeytingLean.ATheory.Assembly.monotone_in_idx",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.CopyNumberSelection",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/CopyNumberSelection.lean",
+      "line": 67,
+      "family": "Selection",
+      "snippet": "lemma monotone_in_idx {v : V} {idx\u2081 idx\u2082 : V \u2192 Nat}\n    (hidx : idx\u2081 v \u2264 idx\u2082 v) :\n    Assembly idx\u2081 \u03bc v \u2264 Assembly idx\u2082 \u03bc v := by\n  unfold Assembly\n  have h\u03bcnonneg : 0 \u2264 (\u03bc v : \u211d) := by\n    exact_mod_cast (Nat.zero_le (\u03bc v))"
+    },
+    {
+      "name": "HeytingLean.ATheory.selected",
+      "id": "HeytingLean.ATheory.selected",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.CopyNumberSelection",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/CopyNumberSelection.lean",
+      "line": 81,
+      "family": "Selection",
+      "snippet": "def selected (\u0398 : Nat) (\u03c4 : Nat) (vset : Finset V)\n    (idx : V \u2192 Nat) (\u03bc : V \u2192 Nat) : Prop :=\n  \u2203 v \u2208 vset, idx v \u2265 \u0398 \u2227 \u03bc v \u2265 \u03c4\n\nnamespace selected"
+    },
+    {
+      "name": "HeytingLean.ATheory.selected.mono_in_Theta",
+      "id": "HeytingLean.ATheory.selected.mono_in_Theta",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.CopyNumberSelection",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/CopyNumberSelection.lean",
+      "line": 92,
+      "family": "Selection",
+      "snippet": "lemma mono_in_Theta (h\u0398 : \u0398' \u2264 \u0398)\n    (hsel : selected \u0398 \u03c4 vset idx \u03bc) :\n    selected \u0398' \u03c4 vset idx \u03bc := by\n  rcases hsel with \u27e8v, hvset, hidx, h\u03bc\u27e9\n  refine \u27e8v, hvset, ?_, h\u03bc\u27e9\n  exact le_trans h\u0398 hidx"
+    },
+    {
+      "name": "HeytingLean.ATheory.selected.mono_in_tau",
+      "id": "HeytingLean.ATheory.selected.mono_in_tau",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.CopyNumberSelection",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/CopyNumberSelection.lean",
+      "line": 101,
+      "family": "Selection",
+      "snippet": "lemma mono_in_tau (h\u03c4 : \u03c4' \u2264 \u03c4)\n    (hsel : selected \u0398 \u03c4 vset idx \u03bc) :\n    selected \u0398 \u03c4' vset idx \u03bc := by\n  rcases hsel with \u27e8v, hvset, hidx, h\u03bc\u27e9\n  refine \u27e8v, hvset, hidx, ?_\u27e9\n  exact le_trans h\u03c4 h\u03bc"
+    },
+    {
+      "name": "HeytingLean.ATheory.AssemblyEnsemble",
+      "id": "HeytingLean.ATheory.AssemblyEnsemble",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.CopyNumberSelection",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/CopyNumberSelection.lean",
+      "line": 116,
+      "family": "Selection",
+      "snippet": "noncomputable def AssemblyEnsemble (idx : V \u2192 Nat) (n : V \u2192 Nat)\n    (vset : Finset V) : \u211d :=\n  -- Total copy number as a natural\n  let NTn : Nat := vset.sum (fun v => n v)\n  -- Guard against the degenerate ensemble: `N_T = 0`\n  if NTn = 0 then"
+    },
+    {
+      "name": "HeytingLean.ATheory.AssemblyEnsemble_empty",
+      "id": "HeytingLean.ATheory.AssemblyEnsemble_empty",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.CopyNumberSelection",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/CopyNumberSelection.lean",
+      "line": 130,
+      "family": "Selection",
+      "snippet": "lemma AssemblyEnsemble_empty [DecidableEq V] (idx : V \u2192 Nat) (n : V \u2192 Nat) :\n    AssemblyEnsemble idx n (\u2205 : Finset V) = 0 := by\n  -- By definition `NTn = \u2211 v in \u2205, n v = 0`\n  simp [AssemblyEnsemble]\n\nlemma AssemblyEnsemble_zero_total [DecidableEq V]"
+    },
+    {
+      "name": "HeytingLean.ATheory.AssemblyEnsemble_zero_total",
+      "id": "HeytingLean.ATheory.AssemblyEnsemble_zero_total",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.CopyNumberSelection",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/CopyNumberSelection.lean",
+      "line": 135,
+      "family": "Selection",
+      "snippet": "lemma AssemblyEnsemble_zero_total [DecidableEq V]\n    (idx : V \u2192 Nat) (n : V \u2192 Nat) (vset : Finset V)\n    (h : vset.sum (fun v => n v) = 0) :\n    AssemblyEnsemble idx n vset = 0 := by\n  -- The guard condition triggers when the total copy number is zero\n  simp [AssemblyEnsemble, h]"
+    },
+    {
+      "name": "HeytingLean.ATheory.Obj.size",
+      "id": "HeytingLean.ATheory.Obj.size",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.AssemblyBounds",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyBounds.lean",
+      "line": 13,
+      "family": "Bounds",
+      "snippet": "def size : Obj \u03b1 \u2192 Nat\n  | Obj.base _ => 1\n  | Obj.join l r => size l + size r\n\n@[simp] lemma size_base (a : \u03b1) : size (Obj.base a) = 1 := rfl"
+    },
+    {
+      "name": "HeytingLean.ATheory.Obj.size_base",
+      "id": "HeytingLean.ATheory.Obj.size_base",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyBounds",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyBounds.lean",
+      "line": 17,
+      "family": "Bounds",
+      "snippet": "@[simp] lemma size_base (a : \u03b1) : size (Obj.base a) = 1 := rfl\n\n@[simp] lemma size_join (l r : Obj \u03b1) : size (Obj.join l r) = size l + size r := rfl\n\nlemma size_pos (o : Obj \u03b1) : 0 < size o := by\n  induction o with"
+    },
+    {
+      "name": "HeytingLean.ATheory.Obj.size_join",
+      "id": "HeytingLean.ATheory.Obj.size_join",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyBounds",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyBounds.lean",
+      "line": 19,
+      "family": "Bounds",
+      "snippet": "@[simp] lemma size_join (l r : Obj \u03b1) : size (Obj.join l r) = size l + size r := rfl\n\nlemma size_pos (o : Obj \u03b1) : 0 < size o := by\n  induction o with\n  | base a => simp\n  | join l r ihl ihr =>"
+    },
+    {
+      "name": "HeytingLean.ATheory.Obj.size_pos",
+      "id": "HeytingLean.ATheory.Obj.size_pos",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyBounds",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyBounds.lean",
+      "line": 21,
+      "family": "Bounds",
+      "snippet": "lemma size_pos (o : Obj \u03b1) : 0 < size o := by\n  induction o with\n  | base a => simp\n  | join l r ihl ihr =>\n      simpa [size] using Nat.add_pos_left ihl (size r)"
+    },
+    {
+      "name": "HeytingLean.ATheory.Obj.size_eq_joinCount_add_one",
+      "id": "HeytingLean.ATheory.Obj.size_eq_joinCount_add_one",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyBounds",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyBounds.lean",
+      "line": 27,
+      "family": "Bounds",
+      "snippet": "lemma size_eq_joinCount_add_one (o : Obj \u03b1) : size o = Obj.joinCount o + 1 := by\n  induction o with\n  | base a => simp [size, Obj.joinCount]\n  | join l r ihl ihr =>\n      calc\n        size (Obj.join l r) = size l + size r := by simp [size]"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblyBounds.assemblyIndex_le_size_sub_one",
+      "id": "HeytingLean.ATheory.Paper.AssemblyBounds.assemblyIndex_le_size_sub_one",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyBounds",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyBounds.lean",
+      "line": 63,
+      "family": "Bounds",
+      "snippet": "lemma assemblyIndex_le_size_sub_one [DecidableEq \u03b1] (o : Obj \u03b1) :\n    AssemblySpace.AssemblyIndex.assemblyIndex\n        (S := ObjSyntax.space (Atom := \u03b1))\n        (hC := ObjSyntax.space.closed (Atom := \u03b1)) o\n      \u2264 Obj.size o - 1 := by\n  have hle :"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblyBounds.ObjSyntax.size_le_mul_pow_two_availableAfter",
+      "id": "HeytingLean.ATheory.Paper.AssemblyBounds.ObjSyntax.size_le_mul_pow_two_availableAfter",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyBounds",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyBounds.lean",
+      "line": 87,
+      "family": "Bounds",
+      "snippet": "private lemma size_le_mul_pow_two_availableAfter\n    (A : Set (Obj \u03b1)) (M : Nat) :\n    \u2200 (steps : List (Step (ObjSyntax.space (Atom := \u03b1)))),\n      (\u2200 t, t \u2208 A \u2192 Obj.size t \u2264 M) \u2192\n      WellFormedFrom (S := ObjSyntax.space (Atom := \u03b1)) A steps \u2192\n      \u2200 t, t \u2208 availableAfter (S := ObjSyntax.space (Atom := \u03b1)) A steps \u2192"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblyBounds.ObjSyntax.size_le_pow_two_availableAfterU",
+      "id": "HeytingLean.ATheory.Paper.AssemblyBounds.ObjSyntax.size_le_pow_two_availableAfterU",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyBounds",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyBounds.lean",
+      "line": 129,
+      "family": "Bounds",
+      "snippet": "private lemma size_le_pow_two_availableAfterU :\n    \u2200 (steps : List (Step (ObjSyntax.space (Atom := \u03b1)))),\n      WellFormedFrom (S := ObjSyntax.space (Atom := \u03b1)) (ObjSyntax.space (Atom := \u03b1)).U steps \u2192\n      \u2200 t, t \u2208 availableAfter (S := ObjSyntax.space (Atom := \u03b1)) (ObjSyntax.space (Atom := \u03b1)).U steps \u2192\n        Obj.size t \u2264 2 ^ steps.length := by\n  intro steps hWF t ht"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblyBounds.assemblyIndex_ge_log2",
+      "id": "HeytingLean.ATheory.Paper.AssemblyBounds.assemblyIndex_ge_log2",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyBounds",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyBounds.lean",
+      "line": 145,
+      "family": "Bounds",
+      "snippet": "lemma assemblyIndex_ge_log2 [DecidableEq \u03b1] (o : Obj \u03b1) (ho : Obj.size o > 1) :\n    Nat.log 2 (Obj.size o)\n      \u2264\n      AssemblySpace.AssemblyIndex.assemblyIndex\n        (S := ObjSyntax.space (Atom := \u03b1))\n        (hC := ObjSyntax.space.closed (Atom := \u03b1)) o := by"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblyBounds.dagJoinCount_bounds",
+      "id": "HeytingLean.ATheory.Paper.AssemblyBounds.dagJoinCount_bounds",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyBounds",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyBounds.lean",
+      "line": 183,
+      "family": "Bounds",
+      "snippet": "lemma dagJoinCount_bounds [DecidableEq \u03b1] (o : Obj \u03b1) (ho : Obj.size o > 1) :\n    Nat.log 2 (Obj.size o) \u2264 Obj.dagJoinCount o \u2227 Obj.dagJoinCount o \u2264 Obj.size o - 1 := by\n  have hlog :\n      Nat.log 2 (Obj.size o)\n        \u2264\n        AssemblySpace.AssemblyIndex.assemblyIndex"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblyBounds.greedyIndex",
+      "id": "HeytingLean.ATheory.Paper.AssemblyBounds.greedyIndex",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.AssemblyBounds",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyBounds.lean",
+      "line": 206,
+      "family": "Bounds",
+      "snippet": "noncomputable def greedyIndex [DecidableEq \u03b1] (o : Obj \u03b1) : Nat :=\n  Obj.dagJoinCount o\n\nlemma greedyIndex_ge_assemblyIndex [DecidableEq \u03b1] (o : Obj \u03b1) :\n    AssemblySpace.AssemblyIndex.assemblyIndex\n        (S := ObjSyntax.space (Atom := \u03b1))"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblyBounds.greedyIndex_ge_assemblyIndex",
+      "id": "HeytingLean.ATheory.Paper.AssemblyBounds.greedyIndex_ge_assemblyIndex",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyBounds",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyBounds.lean",
+      "line": 209,
+      "family": "Bounds",
+      "snippet": "lemma greedyIndex_ge_assemblyIndex [DecidableEq \u03b1] (o : Obj \u03b1) :\n    AssemblySpace.AssemblyIndex.assemblyIndex\n        (S := ObjSyntax.space (Atom := \u03b1))\n        (hC := ObjSyntax.space.closed (Atom := \u03b1)) o\n      \u2264 greedyIndex (\u03b1 := \u03b1) o := by\n  simp [greedyIndex, ObjSyntax.space.assemblyIndex_eq_dagJoinCount (Atom := \u03b1) (o := o)]"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.AssemblyIndex.HasPathLen",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.AssemblyIndex.HasPathLen",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 18,
+      "family": "Index",
+      "snippet": "def HasPathLen (z : S.\u03a9) (n : Nat) : Prop :=\n  \u2203 p : AssemblyPath (S := S) z, p.len = n\n\nlemma exists_len_of_closed (hC : Closed S) (z : S.\u03a9) :\n    \u2203 n : Nat, HasPathLen (S := S) z n := by\n  rcases hC.exists_path z with \u27e8p\u27e9"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.AssemblyIndex.exists_len_of_closed",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.AssemblyIndex.exists_len_of_closed",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 21,
+      "family": "Index",
+      "snippet": "lemma exists_len_of_closed (hC : Closed S) (z : S.\u03a9) :\n    \u2203 n : Nat, HasPathLen (S := S) z n := by\n  rcases hC.exists_path z with \u27e8p\u27e9\n  refine \u27e8p.len, p, rfl\u27e9\n\nnoncomputable def assemblyIndex (hC : Closed S) (z : S.\u03a9) : Nat :="
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.AssemblyIndex.assemblyIndex",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.AssemblyIndex.assemblyIndex",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 26,
+      "family": "Index",
+      "snippet": "noncomputable def assemblyIndex (hC : Closed S) (z : S.\u03a9) : Nat :=\n  Nat.find (exists_len_of_closed (S := S) hC z)\n\nlemma assemblyIndex_spec (hC : Closed S) (z : S.\u03a9) :\n    HasPathLen (S := S) z (assemblyIndex (S := S) hC z) :=\n  Nat.find_spec (exists_len_of_closed (S := S) hC z)"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.AssemblyIndex.assemblyIndex_spec",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.AssemblyIndex.assemblyIndex_spec",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 29,
+      "family": "Index",
+      "snippet": "lemma assemblyIndex_spec (hC : Closed S) (z : S.\u03a9) :\n    HasPathLen (S := S) z (assemblyIndex (S := S) hC z) :=\n  Nat.find_spec (exists_len_of_closed (S := S) hC z)\n\nlemma assemblyIndex_le_of_hasLen (hC : Closed S) (z : S.\u03a9) {n : Nat}\n    (hn : HasPathLen (S := S) z n) :"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.AssemblyIndex.assemblyIndex_le_of_hasLen",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.AssemblyIndex.assemblyIndex_le_of_hasLen",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 33,
+      "family": "Index",
+      "snippet": "lemma assemblyIndex_le_of_hasLen (hC : Closed S) (z : S.\u03a9) {n : Nat}\n    (hn : HasPathLen (S := S) z n) :\n    assemblyIndex (S := S) hC z \u2264 n :=\n  Nat.find_min' (exists_len_of_closed (S := S) hC z) hn\n\nlemma assemblyIndex_le_of_path (hC : Closed S) {z : S.\u03a9} (p : AssemblyPath (S := S) z) :"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.AssemblyIndex.assemblyIndex_le_of_path",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.AssemblyIndex.assemblyIndex_le_of_path",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 38,
+      "family": "Index",
+      "snippet": "lemma assemblyIndex_le_of_path (hC : Closed S) {z : S.\u03a9} (p : AssemblyPath (S := S) z) :\n    assemblyIndex (S := S) hC z \u2264 p.len :=\n  assemblyIndex_le_of_hasLen (S := S) hC z \u27e8p, rfl\u27e9\n\nlemma assemblyIndex_eq_zero_iff (hC : Closed S) (z : S.\u03a9) :\n    assemblyIndex (S := S) hC z = 0 \u2194 z \u2208 S.U := by"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.AssemblyIndex.assemblyIndex_eq_zero_iff",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.AssemblyIndex.assemblyIndex_eq_zero_iff",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 42,
+      "family": "Index",
+      "snippet": "lemma assemblyIndex_eq_zero_iff (hC : Closed S) (z : S.\u03a9) :\n    assemblyIndex (S := S) hC z = 0 \u2194 z \u2208 S.U := by\n  constructor\n  \u00b7 intro hz\n    rcases assemblyIndex_spec (S := S) hC z with \u27e8p, hp\u27e9\n    have hlen0 : p.len = 0 := by simpa [assemblyIndex] using hp.trans hz"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.ObjSyntax.space",
+      "id": "HeytingLean.ATheory.Paper.ObjSyntax.space",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 82,
+      "family": "Index",
+      "snippet": "def space : Paper.AssemblySpace where\n  \u03a9 := Obj Atom\n  U := {o | \u2203 a, o = Obj.base a}\n  J := fun x y z => z = Obj.join x y\n\nnamespace space"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.ObjSyntax.space.primitive",
+      "id": "HeytingLean.ATheory.Paper.ObjSyntax.space.primitive",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 89,
+      "family": "Index",
+      "snippet": "def primitive (a : Atom) : (space (Atom := Atom)).\u03a9 := Obj.base a\n\n@[simp] lemma mem_U_primitive (a : Atom) : primitive (Atom := Atom) a \u2208 (space (Atom := Atom)).U :=\n  \u27e8a, rfl\u27e9\n\n  open Paper.AssemblySpace"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.ObjSyntax.space.mem_U_primitive",
+      "id": "HeytingLean.ATheory.Paper.ObjSyntax.space.mem_U_primitive",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 91,
+      "family": "Index",
+      "snippet": "@[simp] lemma mem_U_primitive (a : Atom) : primitive (Atom := Atom) a \u2208 (space (Atom := Atom)).U :=\n  \u27e8a, rfl\u27e9\n\n  open Paper.AssemblySpace\n\n  private def canonicalSteps : Obj Atom \u2192 List (Step (space (Atom := Atom)))"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.ObjSyntax.space.canonicalSteps",
+      "id": "HeytingLean.ATheory.Paper.ObjSyntax.space.canonicalSteps",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 96,
+      "family": "Index",
+      "snippet": "  private def canonicalSteps : Obj Atom \u2192 List (Step (space (Atom := Atom)))\n  | Obj.base _ => []\n  | Obj.join l r =>\n      canonicalSteps l ++ canonicalSteps r ++\n        [{ x := l, y := r, z := Obj.join l r, ok := rfl }]"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.ObjSyntax.space.canonicalPath",
+      "id": "HeytingLean.ATheory.Paper.ObjSyntax.space.canonicalPath",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 102,
+      "family": "Index",
+      "snippet": "private def canonicalPath : \u2200 o : Obj Atom, AssemblyPath (S := space (Atom := Atom)) o\n  | Obj.base a =>\n      AssemblyPath.primitive (S := space (Atom := Atom)) (z := Obj.base a) (mem_U_primitive (Atom := Atom) a)\n  | Obj.join l r => by\n      classical\n      let pL := canonicalPath l"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.ObjSyntax.space.reuseAwareSteps",
+      "id": "HeytingLean.ATheory.Paper.ObjSyntax.space.reuseAwareSteps",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 168,
+      "family": "Index",
+      "snippet": "  private noncomputable def reuseAwareSteps (A : Set (Obj Atom)) :\n      Obj Atom \u2192 List (Step (space (Atom := Atom)))\n    | Obj.base _ => []\n    | Obj.join l r => by\n        classical\n        by_cases h : Obj.join l r \u2208 A"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.ObjSyntax.space.mem_availableAfter_of_mem_steps",
+      "id": "HeytingLean.ATheory.Paper.ObjSyntax.space.mem_availableAfter_of_mem_steps",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 182,
+      "family": "Index",
+      "snippet": "  private lemma mem_availableAfter_of_mem_steps (A : Set (Obj Atom)) :\n      \u2200 {steps : List (Step (space (Atom := Atom)))} {s : Step (space (Atom := Atom))},\n        s \u2208 steps \u2192 s.z \u2208 availableAfter (S := space (Atom := Atom)) A steps := by\n    intro steps\n    induction steps generalizing A with\n    | nil =>"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.ObjSyntax.space.reuseAwareSteps_z_not_mem",
+      "id": "HeytingLean.ATheory.Paper.ObjSyntax.space.reuseAwareSteps_z_not_mem",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 203,
+      "family": "Index",
+      "snippet": "  private lemma reuseAwareSteps_z_not_mem (A : Set (Obj Atom)) :\n      \u2200 {o : Obj Atom} {s : Step (space (Atom := Atom))},\n        s \u2208 reuseAwareSteps (Atom := Atom) A o \u2192 s.z \u2209 A := by\n    intro o\n    induction o generalizing A with\n    | base a =>"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.ObjSyntax.space.reuseAwareSteps_wf",
+      "id": "HeytingLean.ATheory.Paper.ObjSyntax.space.reuseAwareSteps_wf",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 240,
+      "family": "Index",
+      "snippet": "  private lemma reuseAwareSteps_wf (A : Set (Obj Atom))\n      (hU : (space (Atom := Atom)).U \u2286 A) :\n      \u2200 o : Obj Atom,\n        WellFormedFrom (S := space (Atom := Atom)) A (reuseAwareSteps (Atom := Atom) A o) := by\n    -- First show that the construction always makes its target available.\n    have makes_available :"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.ObjSyntax.space.reuseAwarePath",
+      "id": "HeytingLean.ATheory.Paper.ObjSyntax.space.reuseAwarePath",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 327,
+      "family": "Index",
+      "snippet": "  private noncomputable def reuseAwarePath : \u2200 o : Obj Atom,\n      AssemblyPath (S := space (Atom := Atom)) o\n    | Obj.base a =>\n        AssemblyPath.primitive (S := space (Atom := Atom)) (z := Obj.base a) (mem_U_primitive (Atom := Atom) a)\n    | Obj.join l r => by\n        classical"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.ObjSyntax.space.joinCount_le_of_mem_subobjects",
+      "id": "HeytingLean.ATheory.Paper.ObjSyntax.space.joinCount_le_of_mem_subobjects",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 349,
+      "family": "Index",
+      "snippet": "  private lemma joinCount_le_of_mem_subobjects [DecidableEq Atom] :\n      \u2200 {o t : Obj Atom}, t \u2208 Obj.subobjects o \u2192 Obj.joinCount t \u2264 Obj.joinCount o := by\n    intro o\n    induction o with\n    | base a =>\n        intro t ht"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.ObjSyntax.space.join_not_mem_subobjects_left",
+      "id": "HeytingLean.ATheory.Paper.ObjSyntax.space.join_not_mem_subobjects_left",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 382,
+      "family": "Index",
+      "snippet": "  private lemma join_not_mem_subobjects_left [DecidableEq Atom] (l r : Obj Atom) :\n      Obj.join l r \u2209 Obj.subobjects l := by\n    intro hmem\n    have hle : Obj.joinCount (Obj.join l r) \u2264 Obj.joinCount l :=\n      joinCount_le_of_mem_subobjects (Atom := Atom) (o := l) (t := Obj.join l r) hmem\n    have hgt : Obj.joinCount (Obj.join l r) > Obj.joinCount l := by"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.ObjSyntax.space.join_not_mem_subobjects_right",
+      "id": "HeytingLean.ATheory.Paper.ObjSyntax.space.join_not_mem_subobjects_right",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 391,
+      "family": "Index",
+      "snippet": "  private lemma join_not_mem_subobjects_right [DecidableEq Atom] (l r : Obj Atom) :\n      Obj.join l r \u2209 Obj.subobjects r := by\n    intro hmem\n    have hle : Obj.joinCount (Obj.join l r) \u2264 Obj.joinCount r :=\n      joinCount_le_of_mem_subobjects (Atom := Atom) (o := r) (t := Obj.join l r) hmem\n    have hgt : Obj.joinCount (Obj.join l r) > Obj.joinCount r := by"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.ObjSyntax.space.reuseAwareSteps_z_mem_subobjects",
+      "id": "HeytingLean.ATheory.Paper.ObjSyntax.space.reuseAwareSteps_z_mem_subobjects",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 404,
+      "family": "Index",
+      "snippet": "  private lemma reuseAwareSteps_z_mem_subobjects [DecidableEq Atom] (A : Set (Obj Atom)) :\n      \u2200 {o : Obj Atom} {s : Step (space (Atom := Atom))},\n        s \u2208 reuseAwareSteps (Atom := Atom) A o \u2192 s.z \u2208 Obj.subobjects o := by\n    intro o\n    induction o generalizing A with\n    | base a =>"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.ObjSyntax.space.reuseAwareSteps_z_isJoin",
+      "id": "HeytingLean.ATheory.Paper.ObjSyntax.space.reuseAwareSteps_z_isJoin",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 446,
+      "family": "Index",
+      "snippet": "  private lemma reuseAwareSteps_z_isJoin (A : Set (Obj Atom)) :\n      \u2200 {o : Obj Atom} {s : Step (space (Atom := Atom))},\n        s \u2208 reuseAwareSteps (Atom := Atom) A o \u2192 Obj.isJoin s.z = true := by\n    intro o\n    induction o generalizing A with\n    | base a =>"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.ObjSyntax.space.reuseAwareSteps_nodup_z",
+      "id": "HeytingLean.ATheory.Paper.ObjSyntax.space.reuseAwareSteps_nodup_z",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 482,
+      "family": "Index",
+      "snippet": "  private lemma reuseAwareSteps_nodup_z [DecidableEq Atom] (A : Set (Obj Atom)) :\n      \u2200 o : Obj Atom, (reuseAwareSteps (Atom := Atom) A o |>.map (fun s => s.z)).Nodup := by\n    intro o\n    induction o generalizing A with\n    | base a => simp [reuseAwareSteps]\n    | join l r ihL ihR =>"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.ObjSyntax.space.reuseAwareSteps_len_le_dagJoinCount",
+      "id": "HeytingLean.ATheory.Paper.ObjSyntax.space.reuseAwareSteps_len_le_dagJoinCount",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 556,
+      "family": "Index",
+      "snippet": "  private lemma reuseAwareSteps_len_le_dagJoinCount [DecidableEq Atom] (o : Obj Atom) :\n      (reuseAwareSteps (Atom := Atom) (space (Atom := Atom)).U o).length \u2264 Obj.dagJoinCount o := by\n    classical\n    let steps := reuseAwareSteps (Atom := Atom) (space (Atom := Atom)).U o\n    let outs := steps.map (fun s => s.z)\n    have hNodup : outs.Nodup := by"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.ObjSyntax.space.closed",
+      "id": "HeytingLean.ATheory.Paper.ObjSyntax.space.closed",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 589,
+      "family": "Index",
+      "snippet": "  lemma closed : Closed (space (Atom := Atom)) := by\n    refine \u27e8fun z => ?_\u27e9\n    exact \u27e8canonicalPath (Atom := Atom) z\u27e9\n\n  lemma assemblyIndex_le_joinCount (o : Obj Atom) :\n      AssemblyIndex.assemblyIndex (S := space (Atom := Atom)) (hC := closed (Atom := Atom)) o \u2264 Obj.joinCount o := by"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.ObjSyntax.space.assemblyIndex_le_joinCount",
+      "id": "HeytingLean.ATheory.Paper.ObjSyntax.space.assemblyIndex_le_joinCount",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 593,
+      "family": "Index",
+      "snippet": "  lemma assemblyIndex_le_joinCount (o : Obj Atom) :\n      AssemblyIndex.assemblyIndex (S := space (Atom := Atom)) (hC := closed (Atom := Atom)) o \u2264 Obj.joinCount o := by\n  have hlen : (canonicalPath (Atom := Atom) o).len = Obj.joinCount o := by\n    induction o with\n    | base _ => simp [canonicalPath, Obj.joinCount]\n    | join l r ihL ihR =>"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.ObjSyntax.space.assemblyIndex_le_dagJoinCount",
+      "id": "HeytingLean.ATheory.Paper.ObjSyntax.space.assemblyIndex_le_dagJoinCount",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 609,
+      "family": "Index",
+      "snippet": "  lemma assemblyIndex_le_dagJoinCount [DecidableEq Atom] (o : Obj Atom) :\n      AssemblyIndex.assemblyIndex (S := space (Atom := Atom)) (hC := closed (Atom := Atom)) o \u2264\n        Obj.dagJoinCount o := by\n    classical\n    -- Use the explicit reuse-aware witness path.\n    let p := reuseAwarePath (Atom := Atom) o"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.ObjSyntax.space.join_not_mem_U",
+      "id": "HeytingLean.ATheory.Paper.ObjSyntax.space.join_not_mem_U",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 641,
+      "family": "Index",
+      "snippet": "  private lemma join_not_mem_U (t : Obj Atom) (htJoin : Obj.isJoin t = true) :\n      t \u2209 (space (Atom := Atom)).U := by\n    cases t with\n    | base a =>\n        simp [Obj.isJoin] at htJoin\n    | join l r =>"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.ObjSyntax.space.exists_step_of_mem_availableAfter",
+      "id": "HeytingLean.ATheory.Paper.ObjSyntax.space.exists_step_of_mem_availableAfter",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 651,
+      "family": "Index",
+      "snippet": "  private lemma exists_step_of_mem_availableAfter {A : Set (Obj Atom)} :\n      \u2200 {steps : List (Step (space (Atom := Atom)))} {u : Obj Atom},\n        u \u2208 availableAfter (S := space (Atom := Atom)) A steps \u2192\n        u \u2209 A \u2192\n        \u2203 s \u2208 steps, s.z = u := by\n    intro steps"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.ObjSyntax.space.step_inputs_mem_availableAfter",
+      "id": "HeytingLean.ATheory.Paper.ObjSyntax.space.step_inputs_mem_availableAfter",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 677,
+      "family": "Index",
+      "snippet": "  private lemma step_inputs_mem_availableAfter {A : Set (Obj Atom)}\n      {steps : List (Step (space (Atom := Atom)))}\n      (wf : WellFormedFrom (S := space (Atom := Atom)) A steps) :\n      \u2200 {s : Step (space (Atom := Atom))}, s \u2208 steps \u2192\n        s.x \u2208 availableAfter (S := space (Atom := Atom)) A steps \u2227\n        s.y \u2208 availableAfter (S := space (Atom := Atom)) A steps := by"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.ObjSyntax.space.join_components_mem_availableAfter",
+      "id": "HeytingLean.ATheory.Paper.ObjSyntax.space.join_components_mem_availableAfter",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 700,
+      "family": "Index",
+      "snippet": "  private lemma join_components_mem_availableAfter\n      [DecidableEq Atom]\n      {steps : List (Step (space (Atom := Atom)))}\n      (wf : WellFormedFrom (S := space (Atom := Atom)) (space (Atom := Atom)).U steps)\n      (l r : Obj Atom)\n      (hjr : Obj.join l r \u2208 availableAfter (S := space (Atom := Atom)) (space (Atom := Atom)).U steps) :"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.ObjSyntax.space.subobjects_mem_availableAfter_of_mem",
+      "id": "HeytingLean.ATheory.Paper.ObjSyntax.space.subobjects_mem_availableAfter_of_mem",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 730,
+      "family": "Index",
+      "snippet": "  private lemma subobjects_mem_availableAfter_of_mem\n      [DecidableEq Atom]\n      {steps : List (Step (space (Atom := Atom)))}\n      (wf : WellFormedFrom (S := space (Atom := Atom)) (space (Atom := Atom)).U steps) :\n      \u2200 {u : Obj Atom}, u \u2208 availableAfter (S := space (Atom := Atom)) (space (Atom := Atom)).U steps \u2192\n        \u2200 {t : Obj Atom}, t \u2208 Obj.subobjects u \u2192"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.ObjSyntax.space.join_subobj_mem_step_outputs",
+      "id": "HeytingLean.ATheory.Paper.ObjSyntax.space.join_subobj_mem_step_outputs",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 759,
+      "family": "Index",
+      "snippet": "  private lemma join_subobj_mem_step_outputs\n      [DecidableEq Atom]\n      {o : Obj Atom}\n      (p : AssemblyPath (S := space (Atom := Atom)) o)\n      (t : Obj Atom)\n      (ht : t \u2208 Obj.subobjects o)"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.ObjSyntax.space.dagJoinCount_le_path_len",
+      "id": "HeytingLean.ATheory.Paper.ObjSyntax.space.dagJoinCount_le_path_len",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 776,
+      "family": "Index",
+      "snippet": "  private lemma dagJoinCount_le_path_len\n      [DecidableEq Atom]\n      {o : Obj Atom}\n      (p : AssemblyPath (S := space (Atom := Atom)) o) :\n      Obj.dagJoinCount o \u2264 p.len := by\n    classical"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.ObjSyntax.space.assemblyIndex_eq_dagJoinCount",
+      "id": "HeytingLean.ATheory.Paper.ObjSyntax.space.assemblyIndex_eq_dagJoinCount",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyIndex.lean",
+      "line": 803,
+      "family": "Index",
+      "snippet": "  lemma assemblyIndex_eq_dagJoinCount [DecidableEq Atom] (o : Obj Atom) :\n      AssemblyIndex.assemblyIndex (S := space (Atom := Atom)) (hC := closed (Atom := Atom)) o =\n        Obj.dagJoinCount o := by\n    classical\n    apply Nat.le_antisymm\n    \u00b7 exact assemblyIndex_le_dagJoinCount (Atom := Atom) (o := o)"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.Step",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.Step",
+      "kind": "structure",
+      "module": "HeytingLean.ATheory.Paper.AssemblyPath",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyPath.lean",
+      "line": 15,
+      "family": "Path",
+      "snippet": "structure Step where\n  x : S.\u03a9\n  y : S.\u03a9\n  z : S.\u03a9\n  ok : S.J x y z"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.Step",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.Step",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.AssemblyPath",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyPath.lean",
+      "line": 22,
+      "family": "Path",
+      "snippet": "def Step.usable (A : Set S.\u03a9) (s : Step S) : Prop := s.x \u2208 A \u2227 s.y \u2208 A\n\n/-- Well-formedness of a sequence of join steps, starting from primitives `U`.\n\nAt each step, you may use any previously available object (initially `U`), and the\noutput is added to the available set. This matches the paper\u2019s sequential formulation"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.WellFormedFrom",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.WellFormedFrom",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.AssemblyPath",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyPath.lean",
+      "line": 31,
+      "family": "Path",
+      "snippet": "def WellFormedFrom : Set S.\u03a9 \u2192 List (Step S) \u2192 Prop\n  | _, [] => True\n  | A, s :: ss => s.usable (S := S) A \u2227 WellFormedFrom (Set.insert s.z A) ss\n\n@[simp] lemma wellFormedFrom_nil (A : Set S.\u03a9) : WellFormedFrom (S := S) A [] := True.intro"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.wellFormedFrom_nil",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.wellFormedFrom_nil",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyPath",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyPath.lean",
+      "line": 35,
+      "family": "Path",
+      "snippet": "@[simp] lemma wellFormedFrom_nil (A : Set S.\u03a9) : WellFormedFrom (S := S) A [] := True.intro\n\n/-- Compute the set of available objects after executing a step sequence starting from `A`. -/\ndef availableAfter : Set S.\u03a9 \u2192 List (Step S) \u2192 Set S.\u03a9\n  | A, [] => A\n  | A, s :: ss => availableAfter (Set.insert s.z A) ss"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.availableAfter",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.availableAfter",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.AssemblyPath",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyPath.lean",
+      "line": 38,
+      "family": "Path",
+      "snippet": "def availableAfter : Set S.\u03a9 \u2192 List (Step S) \u2192 Set S.\u03a9\n  | A, [] => A\n  | A, s :: ss => availableAfter (Set.insert s.z A) ss\n\n@[simp] lemma availableAfter_nil (A : Set S.\u03a9) : availableAfter (S := S) A [] = A := rfl"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.availableAfter_nil",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.availableAfter_nil",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyPath",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyPath.lean",
+      "line": 42,
+      "family": "Path",
+      "snippet": "@[simp] lemma availableAfter_nil (A : Set S.\u03a9) : availableAfter (S := S) A [] = A := rfl\n\nlemma availableAfter_cons (A : Set S.\u03a9) (s : Step S) (ss : List (Step S)) :\n    availableAfter (S := S) A (s :: ss) = availableAfter (S := S) (Set.insert s.z A) ss := rfl\n\nlemma wellFormedFrom_append {A : Set S.\u03a9} {xs ys : List (Step S)}"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.availableAfter_cons",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.availableAfter_cons",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyPath",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyPath.lean",
+      "line": 44,
+      "family": "Path",
+      "snippet": "lemma availableAfter_cons (A : Set S.\u03a9) (s : Step S) (ss : List (Step S)) :\n    availableAfter (S := S) A (s :: ss) = availableAfter (S := S) (Set.insert s.z A) ss := rfl\n\nlemma wellFormedFrom_append {A : Set S.\u03a9} {xs ys : List (Step S)}\n    (hxs : WellFormedFrom (S := S) A xs)\n    (hys : WellFormedFrom (S := S) (availableAfter (S := S) A xs) ys) :"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.wellFormedFrom_append",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.wellFormedFrom_append",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyPath",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyPath.lean",
+      "line": 47,
+      "family": "Path",
+      "snippet": "lemma wellFormedFrom_append {A : Set S.\u03a9} {xs ys : List (Step S)}\n    (hxs : WellFormedFrom (S := S) A xs)\n    (hys : WellFormedFrom (S := S) (availableAfter (S := S) A xs) ys) :\n    WellFormedFrom (S := S) A (xs ++ ys) := by\n  induction xs generalizing A with\n  | nil =>"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.wellFormedFrom_mono",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.wellFormedFrom_mono",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyPath",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyPath.lean",
+      "line": 60,
+      "family": "Path",
+      "snippet": "lemma wellFormedFrom_mono {A B : Set S.\u03a9} {xs : List (Step S)}\n    (hAB : A \u2286 B) (hxs : WellFormedFrom (S := S) A xs) :\n    WellFormedFrom (S := S) B xs := by\n  induction xs generalizing A B with\n  | nil => simp [WellFormedFrom]\n  | cons s ss ih =>"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.availableAfter_append",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.availableAfter_append",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyPath",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyPath.lean",
+      "line": 75,
+      "family": "Path",
+      "snippet": "lemma availableAfter_append (A : Set S.\u03a9) (xs ys : List (Step S)) :\n    availableAfter (S := S) A (xs ++ ys) =\n      availableAfter (S := S) (availableAfter (S := S) A xs) ys := by\n  induction xs generalizing A with\n  | nil => simp [availableAfter]\n  | cons s ss ih =>"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.subset_availableAfter",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.subset_availableAfter",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyPath",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyPath.lean",
+      "line": 83,
+      "family": "Path",
+      "snippet": "lemma subset_availableAfter (A : Set S.\u03a9) (xs : List (Step S)) :\n    A \u2286 availableAfter (S := S) A xs := by\n  induction xs generalizing A with\n  | nil => simp [availableAfter]\n  | cons s ss ih =>\n      intro t ht"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.availableAfter_mono",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.availableAfter_mono",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyPath",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyPath.lean",
+      "line": 92,
+      "family": "Path",
+      "snippet": "lemma availableAfter_mono {A B : Set S.\u03a9} {xs : List (Step S)} (hAB : A \u2286 B) :\n    availableAfter (S := S) A xs \u2286 availableAfter (S := S) B xs := by\n  induction xs generalizing A B with\n  | nil => simpa [availableAfter] using hAB\n  | cons s ss ih =>\n      have hAB' : Set.insert s.z A \u2286 Set.insert s.z B := by"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.mem_availableAfter_of_getLast",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.mem_availableAfter_of_getLast",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyPath",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyPath.lean",
+      "line": 104,
+      "family": "Path",
+      "snippet": "lemma mem_availableAfter_of_getLast? {A : Set S.\u03a9} {steps : List (Step S)} {s : Step S}\n    (hs : steps.getLast? = some s) : s.z \u2208 availableAfter (S := S) A steps := by\n  induction steps generalizing A with\n  | nil =>\n      simp at hs\n  | cons t ts ih =>"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.AssemblyPath",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.AssemblyPath",
+      "kind": "structure",
+      "module": "HeytingLean.ATheory.Paper.AssemblyPath",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyPath.lean",
+      "line": 125,
+      "family": "Path",
+      "snippet": "structure AssemblyPath (z : S.\u03a9) where\n  steps : List (Step S)\n  wf : WellFormedFrom (S := S) S.U steps\n  ok_out :\n    (steps = [] \u2227 z \u2208 S.U) \u2228 (\u2203 s, steps.getLast? = some s \u2227 s.z = z)"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.AssemblyPath.len",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.AssemblyPath.len",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.AssemblyPath",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyPath.lean",
+      "line": 135,
+      "family": "Path",
+      "snippet": "def len {z : S.\u03a9} (p : AssemblyPath (S := S) z) : Nat := p.steps.length\n\n@[simp] lemma len_mk {z : S.\u03a9} (steps) (wf) (ok_out) :\n    len (p := (AssemblyPath.mk (S := S) (z := z) steps wf ok_out)) = steps.length := rfl\n\n/-- The trivial path for a primitive object. -/"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.AssemblyPath.len_mk",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.AssemblyPath.len_mk",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyPath",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyPath.lean",
+      "line": 137,
+      "family": "Path",
+      "snippet": "@[simp] lemma len_mk {z : S.\u03a9} (steps) (wf) (ok_out) :\n    len (p := (AssemblyPath.mk (S := S) (z := z) steps wf ok_out)) = steps.length := rfl\n\n/-- The trivial path for a primitive object. -/\ndef primitive {z : S.\u03a9} (hz : z \u2208 S.U) : AssemblyPath (S := S) z :=\n  { steps := []"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.AssemblyPath.primitive",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.AssemblyPath.primitive",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.AssemblyPath",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyPath.lean",
+      "line": 141,
+      "family": "Path",
+      "snippet": "def primitive {z : S.\u03a9} (hz : z \u2208 S.U) : AssemblyPath (S := S) z :=\n  { steps := []\n    wf := by simp [WellFormedFrom]\n    ok_out := Or.inl \u27e8rfl, hz\u27e9 }\n\n@[simp] lemma primitive_len {z : S.\u03a9} (hz : z \u2208 S.U) :"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.AssemblyPath.primitive_len",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.AssemblyPath.primitive_len",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyPath",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyPath.lean",
+      "line": 146,
+      "family": "Path",
+      "snippet": "@[simp] lemma primitive_len {z : S.\u03a9} (hz : z \u2208 S.U) :\n    (primitive (S := S) hz).len = 0 := rfl\n\nlemma mem_availableAfter {z : S.\u03a9} (p : AssemblyPath (S := S) z) :\n    z \u2208 availableAfter (S := S) S.U p.steps := by\n  rcases p.ok_out with \u27e8hsteps, hz\u27e9 | hout"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.AssemblyPath.mem_availableAfter",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.AssemblyPath.mem_availableAfter",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyPath",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyPath.lean",
+      "line": 149,
+      "family": "Path",
+      "snippet": "lemma mem_availableAfter {z : S.\u03a9} (p : AssemblyPath (S := S) z) :\n    z \u2208 availableAfter (S := S) S.U p.steps := by\n  rcases p.ok_out with \u27e8hsteps, hz\u27e9 | hout\n  \u00b7 simpa [hsteps, availableAfter] using hz\n  \u00b7 rcases hout with \u27e8s, hsLast, hsZ\u27e9\n    subst hsZ"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.Closed",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.Closed",
+      "kind": "structure",
+      "module": "HeytingLean.ATheory.Paper.AssemblyPath",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyPath.lean",
+      "line": 165,
+      "family": "Path",
+      "snippet": "structure Closed (S : AssemblySpace) : Prop where\n  exists_path : \u2200 z : S.\u03a9, Nonempty (AssemblyPath (S := S) z)\n\nend AssemblySpace\n\nend Paper"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.quotient",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.quotient",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.AssemblyQuotient",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyQuotient.lean",
+      "line": 17,
+      "family": "Quotient",
+      "snippet": "def quotient (r : Setoid S.\u03a9) : AssemblySpace where\n  \u03a9 := Quotient r\n  U := {q | \u2203 x \u2208 S.U, Quotient.mk r x = q}\n  J := fun qx qy qz =>\n    \u2203 x y z,\n      Quotient.mk r x = qx \u2227"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.Quotient.mk_mem_U",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.Quotient.mk_mem_U",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyQuotient",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyQuotient.lean",
+      "line": 31,
+      "family": "Quotient",
+      "snippet": "@[simp] lemma mk_mem_U {x : S.\u03a9} (hx : x \u2208 S.U) :\n    Quotient.mk r x \u2208 (AssemblySpace.quotient (S := S) r).U :=\n  \u27e8x, hx, rfl\u27e9\n\nprivate def liftSet (A : Set S.\u03a9) : Set (Quotient r) :=\n  {q | \u2203 x \u2208 A, Quotient.mk r x = q}"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.Quotient.liftSet",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.Quotient.liftSet",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.AssemblyQuotient",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyQuotient.lean",
+      "line": 35,
+      "family": "Quotient",
+      "snippet": "private def liftSet (A : Set S.\u03a9) : Set (Quotient r) :=\n  {q | \u2203 x \u2208 A, Quotient.mk r x = q}\n\nprivate def mapStep (s : Step (S := S)) : Step (S := AssemblySpace.quotient (S := S) r) where\n  x := Quotient.mk r s.x\n  y := Quotient.mk r s.y"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.Quotient.mapStep",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.Quotient.mapStep",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.AssemblyQuotient",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyQuotient.lean",
+      "line": 38,
+      "family": "Quotient",
+      "snippet": "private def mapStep (s : Step (S := S)) : Step (S := AssemblySpace.quotient (S := S) r) where\n  x := Quotient.mk r s.x\n  y := Quotient.mk r s.y\n  z := Quotient.mk r s.z\n  ok := \u27e8s.x, s.y, s.z, rfl, rfl, rfl, s.ok\u27e9"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.Quotient.map_wf_aux",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.Quotient.map_wf_aux",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyQuotient",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyQuotient.lean",
+      "line": 44,
+      "family": "Quotient",
+      "snippet": "private lemma map_wf_aux (A : Set S.\u03a9) :\n    \u2200 {steps : List (Step (S := S))},\n      WellFormedFrom (S := S) A steps \u2192\n      WellFormedFrom (S := AssemblySpace.quotient (S := S) r) (liftSet (r := r) A)\n        (steps.map (mapStep (S := S) (r := r))) := by\n  intro steps"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.Quotient.map_wf",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.Quotient.map_wf",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyQuotient",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyQuotient.lean",
+      "line": 86,
+      "family": "Quotient",
+      "snippet": "private lemma map_wf (p : AssemblyPath (S := S) (z := (z : S.\u03a9))) :\n    WellFormedFrom (S := AssemblySpace.quotient (S := S) r)\n      (AssemblySpace.quotient (S := S) r).U\n      (p.steps.map (mapStep (S := S) (r := r))) := by\n  have hU : liftSet (r := r) S.U = (AssemblySpace.quotient (S := S) r).U := by\n    ext q"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.Quotient.map_ok_out",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.Quotient.map_ok_out",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyQuotient",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyQuotient.lean",
+      "line": 101,
+      "family": "Quotient",
+      "snippet": "private lemma map_ok_out (p : AssemblyPath (S := S) (z := (z : S.\u03a9))) :\n    ((p.steps.map (mapStep (S := S) (r := r))) = [] \u2227\n        Quotient.mk r z \u2208 (AssemblySpace.quotient (S := S) r).U) \u2228\n      (\u2203 s,\n        (p.steps.map (mapStep (S := S) (r := r))).getLast? = some s \u2227\n          s.z = Quotient.mk r z) := by"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.Quotient.mapPath",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.Quotient.mapPath",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.AssemblyQuotient",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyQuotient.lean",
+      "line": 123,
+      "family": "Quotient",
+      "snippet": "noncomputable def mapPath (z : S.\u03a9) (p : AssemblyPath (S := S) z) :\n    AssemblyPath (S := AssemblySpace.quotient (S := S) r) (Quotient.mk r z) :=\n  { steps := p.steps.map (mapStep (S := S) (r := r))\n    wf := by\n      -- The binder form of `map_wf` avoids rewriting `z` in the binder.\n      simpa using (map_wf (S := S) (r := r) (z := z) p)"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.Closed.quotient",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.Closed.quotient",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.AssemblyQuotient",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyQuotient.lean",
+      "line": 139,
+      "family": "Quotient",
+      "snippet": "noncomputable def quotient (hC : Closed S) (r : Setoid S.\u03a9) :\n    Closed (AssemblySpace.quotient (S := S) r) := by\n  classical\n  refine \u27e8fun q => ?_\u27e9\n  refine Quotient.inductionOn q (fun z => ?_) \n  rcases hC.exists_path z with \u27e8p\u27e9"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace.AssemblyIndex.assemblyIndex_quotient_le",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace.AssemblyIndex.assemblyIndex_quotient_le",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.AssemblyQuotient",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblyQuotient.lean",
+      "line": 153,
+      "family": "Quotient",
+      "snippet": "lemma assemblyIndex_quotient_le (hC : Closed S) (r : Setoid S.\u03a9) (z : S.\u03a9) :\n    AssemblyIndex.assemblyIndex (S := AssemblySpace.quotient (S := S) r)\n        (hC := Closed.quotient (S := S) hC r) (Quotient.mk r z)\n      \u2264 AssemblyIndex.assemblyIndex (S := S) (hC := hC) z := by\n  classical\n  rcases assemblyIndex_spec (S := S) (hC := hC) z with \u27e8p, hp\u27e9"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.AssemblySpace",
+      "id": "HeytingLean.ATheory.Paper.AssemblySpace",
+      "kind": "structure",
+      "module": "HeytingLean.ATheory.Paper.AssemblySpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/AssemblySpace.lean",
+      "line": 17,
+      "family": "Space",
+      "snippet": "structure AssemblySpace where\n  \u03a9 : Type u\n  U : Set \u03a9\n  /-- `J x y z` means `x` and `y` can be causally joined to form `z`. -/\n  J : \u03a9 \u2192 \u03a9 \u2192 \u03a9 \u2192 Prop"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.BHypergraph.Graph",
+      "id": "HeytingLean.ATheory.Paper.BHypergraph.Graph",
+      "kind": "structure",
+      "module": "HeytingLean.ATheory.Paper.HypergraphSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/HypergraphSpace.lean",
+      "line": 34,
+      "family": "Hypergraph",
+      "snippet": "structure Graph where\n  V : Type u\n  U : Set V\n  E : V \u2192 V \u2192 V \u2192 Prop\n\n/-- View a B-hypergraph as a paper-facing `AssemblySpace`. -/"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.BHypergraph.toAssemblySpace",
+      "id": "HeytingLean.ATheory.Paper.BHypergraph.toAssemblySpace",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.HypergraphSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/HypergraphSpace.lean",
+      "line": 40,
+      "family": "Hypergraph",
+      "snippet": "def toAssemblySpace (H : Graph) : AssemblySpace where\n  \u03a9 := H.V\n  U := H.U\n  J := H.E\n\n/-- A hyperedge packaged with evidence it is allowed (same data as `AssemblySpace.Step`). -/"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.BHypergraph.Edge",
+      "id": "HeytingLean.ATheory.Paper.BHypergraph.Edge",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.HypergraphSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/HypergraphSpace.lean",
+      "line": 46,
+      "family": "Hypergraph",
+      "snippet": "abbrev Edge (H : Graph) := AssemblySpace.Step (S := toAssemblySpace H)\n\n/-- A reuse-capable sequential hyperpath for `z` (definitional alias of `AssemblyPath`). -/\nabbrev HyperPath (H : Graph) (z : H.V) :=\n  AssemblySpace.AssemblyPath (S := toAssemblySpace H) z"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.BHypergraph.HyperPath",
+      "id": "HeytingLean.ATheory.Paper.BHypergraph.HyperPath",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.HypergraphSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/HypergraphSpace.lean",
+      "line": 49,
+      "family": "Hypergraph",
+      "snippet": "abbrev HyperPath (H : Graph) (z : H.V) :=\n  AssemblySpace.AssemblyPath (S := toAssemblySpace H) z\n\nabbrev Closed (H : Graph) : Prop := AssemblySpace.Closed (toAssemblySpace H)\n\nnamespace HyperIndex"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.BHypergraph.Closed",
+      "id": "HeytingLean.ATheory.Paper.BHypergraph.Closed",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.HypergraphSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/HypergraphSpace.lean",
+      "line": 52,
+      "family": "Hypergraph",
+      "snippet": "abbrev Closed (H : Graph) : Prop := AssemblySpace.Closed (toAssemblySpace H)\n\nnamespace HyperIndex\n\n/-- A vertex `z` has a hyperpath of length `n`. -/\ndef HasHyperPathLen (H : Graph) (z : H.V) (n : Nat) : Prop :="
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.BHypergraph.HyperIndex.HasHyperPathLen",
+      "id": "HeytingLean.ATheory.Paper.BHypergraph.HyperIndex.HasHyperPathLen",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.HypergraphSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/HypergraphSpace.lean",
+      "line": 57,
+      "family": "Hypergraph",
+      "snippet": "def HasHyperPathLen (H : Graph) (z : H.V) (n : Nat) : Prop :=\n  \u2203 p : HyperPath H z, p.len = n\n\n/-- The minimal hyperpath length (hypergraph view of `AssemblyIndex.assemblyIndex`). -/\nnoncomputable def hyperIndex (H : Graph) (hC : Closed H) (z : H.V) : Nat :=\n  AssemblySpace.AssemblyIndex.assemblyIndex (S := toAssemblySpace H) (hC := hC) z"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.BHypergraph.HyperIndex.hyperIndex",
+      "id": "HeytingLean.ATheory.Paper.BHypergraph.HyperIndex.hyperIndex",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.HypergraphSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/HypergraphSpace.lean",
+      "line": 61,
+      "family": "Hypergraph",
+      "snippet": "noncomputable def hyperIndex (H : Graph) (hC : Closed H) (z : H.V) : Nat :=\n  AssemblySpace.AssemblyIndex.assemblyIndex (S := toAssemblySpace H) (hC := hC) z\n\nlemma hyperIndex_spec (H : Graph) (hC : Closed H) (z : H.V) :\n    HasHyperPathLen H z (hyperIndex H hC z) := by\n  rcases AssemblySpace.AssemblyIndex.assemblyIndex_spec (S := toAssemblySpace H) hC z with \u27e8p, hp\u27e9"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.BHypergraph.HyperIndex.hyperIndex_spec",
+      "id": "HeytingLean.ATheory.Paper.BHypergraph.HyperIndex.hyperIndex_spec",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.HypergraphSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/HypergraphSpace.lean",
+      "line": 64,
+      "family": "Hypergraph",
+      "snippet": "lemma hyperIndex_spec (H : Graph) (hC : Closed H) (z : H.V) :\n    HasHyperPathLen H z (hyperIndex H hC z) := by\n  rcases AssemblySpace.AssemblyIndex.assemblyIndex_spec (S := toAssemblySpace H) hC z with \u27e8p, hp\u27e9\n  exact \u27e8p, hp\u27e9\n\nlemma hyperIndex_le_of_hasLen (H : Graph) (hC : Closed H) (z : H.V) {n : Nat}"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.BHypergraph.HyperIndex.hyperIndex_le_of_hasLen",
+      "id": "HeytingLean.ATheory.Paper.BHypergraph.HyperIndex.hyperIndex_le_of_hasLen",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.HypergraphSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/HypergraphSpace.lean",
+      "line": 69,
+      "family": "Hypergraph",
+      "snippet": "lemma hyperIndex_le_of_hasLen (H : Graph) (hC : Closed H) (z : H.V) {n : Nat}\n    (hn : HasHyperPathLen H z n) :\n    hyperIndex H hC z \u2264 n := by\n  rcases hn with \u27e8p, hp\u27e9\n  have :\n      AssemblySpace.AssemblyIndex.assemblyIndex (S := toAssemblySpace H) (hC := hC) z \u2264 n := by"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.BHypergraph.HyperIndex.hyperIndex_le_of_path",
+      "id": "HeytingLean.ATheory.Paper.BHypergraph.HyperIndex.hyperIndex_le_of_path",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.HypergraphSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/HypergraphSpace.lean",
+      "line": 78,
+      "family": "Hypergraph",
+      "snippet": "lemma hyperIndex_le_of_path (H : Graph) (hC : Closed H) {z : H.V} (p : HyperPath H z) :\n    hyperIndex H hC z \u2264 p.len := by\n  simpa [hyperIndex] using\n    (AssemblySpace.AssemblyIndex.assemblyIndex_le_of_path (S := toAssemblySpace H) hC p)\n\nend HyperIndex"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.BHypergraph.ofAssemblySpace",
+      "id": "HeytingLean.ATheory.Paper.BHypergraph.ofAssemblySpace",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.HypergraphSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/HypergraphSpace.lean",
+      "line": 88,
+      "family": "Hypergraph",
+      "snippet": "def ofAssemblySpace (S : AssemblySpace) : Graph where\n  V := S.\u03a9\n  U := S.U\n  E := S.J\n\n@[simp] lemma toAssemblySpace_ofAssemblySpace (S : AssemblySpace) :"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.BHypergraph.toAssemblySpace_ofAssemblySpace",
+      "id": "HeytingLean.ATheory.Paper.BHypergraph.toAssemblySpace_ofAssemblySpace",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.HypergraphSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/HypergraphSpace.lean",
+      "line": 93,
+      "family": "Hypergraph",
+      "snippet": "@[simp] lemma toAssemblySpace_ofAssemblySpace (S : AssemblySpace) :\n    toAssemblySpace (ofAssemblySpace S) = S := rfl\n\nnamespace HyperIndex\n\n@[simp] lemma hyperIndex_ofAssemblySpace_eq (S : AssemblySpace) (hC : AssemblySpace.Closed S) (z : S.\u03a9) :"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.BHypergraph.HyperIndex.hyperIndex_ofAssemblySpace_eq",
+      "id": "HeytingLean.ATheory.Paper.BHypergraph.HyperIndex.hyperIndex_ofAssemblySpace_eq",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.HypergraphSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/HypergraphSpace.lean",
+      "line": 98,
+      "family": "Hypergraph",
+      "snippet": "@[simp] lemma hyperIndex_ofAssemblySpace_eq (S : AssemblySpace) (hC : AssemblySpace.Closed S) (z : S.\u03a9) :\n    hyperIndex (H := ofAssemblySpace S) (hC := by simpa using hC) z =\n      AssemblySpace.AssemblyIndex.assemblyIndex (S := S) (hC := hC) z := rfl\n\nend HyperIndex"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.Molecular.Bond",
+      "id": "HeytingLean.ATheory.Paper.Molecular.Bond",
+      "kind": "structure",
+      "module": "HeytingLean.ATheory.Paper.MolecularSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/MolecularSpace.lean",
+      "line": 47,
+      "family": "Molecular",
+      "snippet": "structure Bond (Atom : Type u) where\n  id : Nat\n  a : Atom\n  b : Atom\nderiving DecidableEq"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.Molecular.MolLabel",
+      "id": "HeytingLean.ATheory.Paper.Molecular.MolLabel",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.MolecularSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/MolecularSpace.lean",
+      "line": 67,
+      "family": "Molecular",
+      "snippet": "abbrev MolLabel (Atom : Type u) := Atom \u2295 Nat\n\n/-- A finite labelled simple graph (hydrogen-suppressed), used as a semantics target.\n\n`V` is an abstract finite vertex type; `label` assigns a label in `Atom \u2295 Nat` to each vertex.\nThe underlying graph is unlabelled."
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.Molecular.MolGraph",
+      "id": "HeytingLean.ATheory.Paper.Molecular.MolGraph",
+      "kind": "structure",
+      "module": "HeytingLean.ATheory.Paper.MolecularSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/MolecularSpace.lean",
+      "line": 75,
+      "family": "Molecular",
+      "snippet": "structure MolGraph (Atom : Type u) where\n  V : Type\n  [instFintype : Fintype V]\n  [instDecEq : DecidableEq V]\n  label : V \u2192 MolLabel Atom\n  graph : SimpleGraph V"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.Molecular.MolIso",
+      "id": "HeytingLean.ATheory.Paper.Molecular.MolIso",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.MolecularSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/MolecularSpace.lean",
+      "line": 86,
+      "family": "Molecular",
+      "snippet": "def MolIso (G H : MolGraph Atom) : Prop :=\n  \u2203 iso : G.graph \u2243g H.graph, \u2200 v, H.label (iso v) = G.label v\n\nlemma molIso_refl (G : MolGraph Atom) : MolIso (Atom := Atom) G G := by\n  refine \u27e8SimpleGraph.Iso.refl (G := G.graph), ?_\u27e9\n  intro v"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.Molecular.molIso_refl",
+      "id": "HeytingLean.ATheory.Paper.Molecular.molIso_refl",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.MolecularSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/MolecularSpace.lean",
+      "line": 89,
+      "family": "Molecular",
+      "snippet": "lemma molIso_refl (G : MolGraph Atom) : MolIso (Atom := Atom) G G := by\n  refine \u27e8SimpleGraph.Iso.refl (G := G.graph), ?_\u27e9\n  intro v\n  simp\n\nlemma molIso_symm {G H : MolGraph Atom} :"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.Molecular.molIso_symm",
+      "id": "HeytingLean.ATheory.Paper.Molecular.molIso_symm",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.MolecularSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/MolecularSpace.lean",
+      "line": 94,
+      "family": "Molecular",
+      "snippet": "lemma molIso_symm {G H : MolGraph Atom} :\n    MolIso (Atom := Atom) G H \u2192 MolIso (Atom := Atom) H G := by\n  rintro \u27e8iso, hlabel\u27e9\n  refine \u27e8iso.symm, ?_\u27e9\n  intro v\n  -- apply `hlabel` at `iso.symm v`"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.Molecular.molIso_trans",
+      "id": "HeytingLean.ATheory.Paper.Molecular.molIso_trans",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.MolecularSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/MolecularSpace.lean",
+      "line": 103,
+      "family": "Molecular",
+      "snippet": "lemma molIso_trans {G H K : MolGraph Atom} :\n    MolIso (Atom := Atom) G H \u2192 MolIso (Atom := Atom) H K \u2192 MolIso (Atom := Atom) G K := by\n  rintro \u27e8iso1, h1\u27e9 \u27e8iso2, h2\u27e9\n  refine \u27e8iso1.trans iso2, ?_\u27e9\n  intro v\n  have h2' := h2 (iso1 v)"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.Molecular.MolGraph.IsAtomVertex",
+      "id": "HeytingLean.ATheory.Paper.Molecular.MolGraph.IsAtomVertex",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.MolecularSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/MolecularSpace.lean",
+      "line": 126,
+      "family": "Molecular",
+      "snippet": "def IsAtomVertex (G : MolGraph Atom) (v : G.V) : Prop :=\n  \u2203 a : Atom, G.label v = Sum.inl a\n\n/-- Predicate: a vertex carries a bond-id label. -/\ndef IsBondVertex (G : MolGraph Atom) (v : G.V) : Prop :=\n  \u2203 n : Nat, G.label v = Sum.inr n"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.Molecular.MolGraph.IsBondVertex",
+      "id": "HeytingLean.ATheory.Paper.Molecular.MolGraph.IsBondVertex",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.MolecularSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/MolecularSpace.lean",
+      "line": 130,
+      "family": "Molecular",
+      "snippet": "def IsBondVertex (G : MolGraph Atom) (v : G.V) : Prop :=\n  \u2203 n : Nat, G.label v = Sum.inr n\n\ndef disjointUnion (G H : MolGraph Atom) : MolGraph Atom where\n  V := G.V \u2295 H.V\n  label := Sum.elim G.label H.label"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.Molecular.MolGraph.disjointUnion",
+      "id": "HeytingLean.ATheory.Paper.Molecular.MolGraph.disjointUnion",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.MolecularSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/MolecularSpace.lean",
+      "line": 133,
+      "family": "Molecular",
+      "snippet": "def disjointUnion (G H : MolGraph Atom) : MolGraph Atom where\n  V := G.V \u2295 H.V\n  label := Sum.elim G.label H.label\n  graph := G.graph \u2295g H.graph\n\nnoncomputable def identify (G H : MolGraph Atom) (v : G.V) (w : H.V) : MolGraph Atom := by"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.Molecular.MolGraph.identify",
+      "id": "HeytingLean.ATheory.Paper.Molecular.MolGraph.identify",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.MolecularSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/MolecularSpace.lean",
+      "line": 138,
+      "family": "Molecular",
+      "snippet": "noncomputable def identify (G H : MolGraph Atom) (v : G.V) (w : H.V) : MolGraph Atom := by\n  classical\n  let U : MolGraph Atom := disjointUnion (Atom := Atom) G H\n  let s : U.V := Sum.inl v\n  let t : U.V := Sum.inr w\n  -- Make `s` inherit all neighbours of `t`, then delete `t`."
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.Molecular.MolGraph.IsJoinAtom",
+      "id": "HeytingLean.ATheory.Paper.Molecular.MolGraph.IsJoinAtom",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.MolecularSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/MolecularSpace.lean",
+      "line": 159,
+      "family": "Molecular",
+      "snippet": "def IsJoinAtom (G H K : MolGraph Atom) : Prop :=\n  \u2203 (v : G.V) (w : H.V),\n    IsAtomVertex (Atom := Atom) G v \u2227\n    IsAtomVertex (Atom := Atom) H w \u2227\n    MolIso (Atom := Atom) K (identify (Atom := Atom) G H v w)"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.Molecular.MolState",
+      "id": "HeytingLean.ATheory.Paper.Molecular.MolState",
+      "kind": "structure",
+      "module": "HeytingLean.ATheory.Paper.MolecularSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/MolecularSpace.lean",
+      "line": 175,
+      "family": "Molecular",
+      "snippet": "structure MolState (Atom : Type u) where\n  core : MolGraph Atom\n  port : core.V\n\nnamespace MolState"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.Molecular.MolState.disjointUnion",
+      "id": "HeytingLean.ATheory.Paper.Molecular.MolState.disjointUnion",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.MolecularSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/MolecularSpace.lean",
+      "line": 181,
+      "family": "Molecular",
+      "snippet": "def disjointUnion (G H : MolState Atom) : MolState Atom where\n  core := MolGraph.disjointUnion (Atom := Atom) G.core H.core\n  port := Sum.inl G.port\n\nnoncomputable def join (G H : MolState Atom) : MolState Atom := by\n  classical"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.Molecular.MolState.join",
+      "id": "HeytingLean.ATheory.Paper.Molecular.MolState.join",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.MolecularSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/MolecularSpace.lean",
+      "line": 185,
+      "family": "Molecular",
+      "snippet": "noncomputable def join (G H : MolState Atom) : MolState Atom := by\n  classical\n  -- Identify left port with right port.\n  let core' := MolGraph.identify (Atom := Atom) G.core H.core G.port H.port\n  exact\n    { core := core'"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.Molecular.evalBond",
+      "id": "HeytingLean.ATheory.Paper.Molecular.evalBond",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.MolecularSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/MolecularSpace.lean",
+      "line": 197,
+      "family": "Molecular",
+      "snippet": "def evalBond (b : Bond Atom) : MolState Atom := by\n  classical\n  -- Encode a *unique bond* inside `SimpleGraph` by introducing an explicit bond-vertex.\n  -- Vertices are labelled by `Atom \u2295 Nat`, where `Sum.inr b.id` tags the bond instance.\n  let Label := Atom \u2295 Nat\n  let V : Type := Fin 3"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.Molecular.evalObj",
+      "id": "HeytingLean.ATheory.Paper.Molecular.evalObj",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.MolecularSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/MolecularSpace.lean",
+      "line": 217,
+      "family": "Molecular",
+      "snippet": "noncomputable def evalObj : Obj (Bond Atom) \u2192 MolState Atom\n  | Obj.base b => evalBond (Atom := Atom) b\n  | Obj.join x y => MolState.join (Atom := Atom) (evalObj x) (evalObj y)\n\nnoncomputable def evalCore (o : Obj (Bond Atom)) : MolGraph Atom :=\n  (evalObj (Atom := Atom) o).core"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.Molecular.evalCore",
+      "id": "HeytingLean.ATheory.Paper.Molecular.evalCore",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.MolecularSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/MolecularSpace.lean",
+      "line": 221,
+      "family": "Molecular",
+      "snippet": "noncomputable def evalCore (o : Obj (Bond Atom)) : MolGraph Atom :=\n  (evalObj (Atom := Atom) o).core\n\n/-! ## Option B: quotient-by-isomorphism space -/\n\ndef evalIsoRel (x y : Obj (Bond Atom)) : Prop :="
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.Molecular.evalIsoRel",
+      "id": "HeytingLean.ATheory.Paper.Molecular.evalIsoRel",
+      "kind": "def",
+      "module": "HeytingLean.ATheory.Paper.MolecularSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/MolecularSpace.lean",
+      "line": 226,
+      "family": "Molecular",
+      "snippet": "def evalIsoRel (x y : Obj (Bond Atom)) : Prop :=\n  MolIso (Atom := Atom) (evalCore (Atom := Atom) x) (evalCore (Atom := Atom) y)\n\nprivate theorem evalIsoRel_refl (x : Obj (Bond Atom)) : evalIsoRel (Atom := Atom) x x :=\n  molIso_refl (Atom := Atom) (evalCore (Atom := Atom) x)"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.Molecular.evalIsoRel_refl",
+      "id": "HeytingLean.ATheory.Paper.Molecular.evalIsoRel_refl",
       "kind": "theorem",
-      "module": "Paper.MolecularSpace",
-      "file": "Paper/MolecularSpace.lean"
+      "module": "HeytingLean.ATheory.Paper.MolecularSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/MolecularSpace.lean",
+      "line": 229,
+      "family": "Molecular",
+      "snippet": "private theorem evalIsoRel_refl (x : Obj (Bond Atom)) : evalIsoRel (Atom := Atom) x x :=\n  molIso_refl (Atom := Atom) (evalCore (Atom := Atom) x)\n\nprivate theorem evalIsoRel_symm {x y : Obj (Bond Atom)} :\n    evalIsoRel (Atom := Atom) x y \u2192 evalIsoRel (Atom := Atom) y x := by\n  exact molIso_symm (Atom := Atom)"
     },
     {
-      "name": "Paper.MolecularSpace.evalIsoRel_trans",
+      "name": "HeytingLean.ATheory.Paper.Molecular.evalIsoRel_symm",
+      "id": "HeytingLean.ATheory.Paper.Molecular.evalIsoRel_symm",
       "kind": "theorem",
-      "module": "Paper.MolecularSpace",
-      "file": "Paper/MolecularSpace.lean"
+      "module": "HeytingLean.ATheory.Paper.MolecularSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/MolecularSpace.lean",
+      "line": 232,
+      "family": "Molecular",
+      "snippet": "private theorem evalIsoRel_symm {x y : Obj (Bond Atom)} :\n    evalIsoRel (Atom := Atom) x y \u2192 evalIsoRel (Atom := Atom) y x := by\n  exact molIso_symm (Atom := Atom)\n\nprivate theorem evalIsoRel_trans {x y z : Obj (Bond Atom)} :\n    evalIsoRel (Atom := Atom) x y \u2192 evalIsoRel (Atom := Atom) y z \u2192 evalIsoRel (Atom := Atom) x z := by"
     },
     {
-      "name": "Paper.MolecularSpace.molIso_refl",
-      "kind": "lemma",
-      "module": "Paper.MolecularSpace",
-      "file": "Paper/MolecularSpace.lean"
+      "name": "HeytingLean.ATheory.Paper.Molecular.evalIsoRel_trans",
+      "id": "HeytingLean.ATheory.Paper.Molecular.evalIsoRel_trans",
+      "kind": "theorem",
+      "module": "HeytingLean.ATheory.Paper.MolecularSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/MolecularSpace.lean",
+      "line": 236,
+      "family": "Molecular",
+      "snippet": "private theorem evalIsoRel_trans {x y z : Obj (Bond Atom)} :\n    evalIsoRel (Atom := Atom) x y \u2192 evalIsoRel (Atom := Atom) y z \u2192 evalIsoRel (Atom := Atom) x z := by\n  exact molIso_trans (Atom := Atom)\n\ndef evalIsoSetoid : Setoid (Obj (Bond Atom)) :=\n  Setoid.mk (evalIsoRel (Atom := Atom))"
     },
     {
-      "name": "Paper.MolecularSpace.molIso_symm",
-      "kind": "lemma",
-      "module": "Paper.MolecularSpace",
-      "file": "Paper/MolecularSpace.lean"
-    },
-    {
-      "name": "Paper.MolecularSpace.molIso_trans",
-      "kind": "lemma",
-      "module": "Paper.MolecularSpace",
-      "file": "Paper/MolecularSpace.lean"
-    },
-    {
-      "name": "Paper.MolecularSpace.assemblyIndex_syntax_eq_dagJoinCount",
-      "kind": "lemma",
-      "module": "Paper.MolecularSpace",
-      "file": "Paper/MolecularSpace.lean"
-    },
-    {
-      "name": "Paper.MolecularSpace.assemblyIndex_mol_le_dagJoinCount",
-      "kind": "lemma",
-      "module": "Paper.MolecularSpace",
-      "file": "Paper/MolecularSpace.lean"
-    },
-    {
-      "name": "Paper.MolecularSpace.MolIso",
+      "name": "HeytingLean.ATheory.Paper.Molecular.evalIsoSetoid",
+      "id": "HeytingLean.ATheory.Paper.Molecular.evalIsoSetoid",
       "kind": "def",
-      "module": "Paper.MolecularSpace",
-      "file": "Paper/MolecularSpace.lean"
+      "module": "HeytingLean.ATheory.Paper.MolecularSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/MolecularSpace.lean",
+      "line": 240,
+      "family": "Molecular",
+      "snippet": "def evalIsoSetoid : Setoid (Obj (Bond Atom)) :=\n  Setoid.mk (evalIsoRel (Atom := Atom))\n    \u27e8evalIsoRel_refl (Atom := Atom),\n     by intro x y; exact evalIsoRel_symm (Atom := Atom),\n     by intro x y z; exact evalIsoRel_trans (Atom := Atom)\u27e9"
     },
     {
-      "name": "Paper.MolecularSpace.IsAtomVertex",
+      "name": "HeytingLean.ATheory.Paper.Molecular.molSpace",
+      "id": "HeytingLean.ATheory.Paper.Molecular.molSpace",
       "kind": "def",
-      "module": "Paper.MolecularSpace",
-      "file": "Paper/MolecularSpace.lean"
+      "module": "HeytingLean.ATheory.Paper.MolecularSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/MolecularSpace.lean",
+      "line": 250,
+      "family": "Molecular",
+      "snippet": "def molSpace (Atom : Type u) : AssemblySpace :=\n  AssemblySpace.quotient\n    (S := ObjSyntax.space (Atom := Bond Atom))\n    (evalIsoSetoid (Atom := Atom))\n\nnoncomputable def closed (Atom : Type u) : AssemblySpace.Closed (molSpace (Atom := Atom)) := by"
     },
     {
-      "name": "Paper.MolecularSpace.IsBondVertex",
+      "name": "HeytingLean.ATheory.Paper.Molecular.closed",
+      "id": "HeytingLean.ATheory.Paper.Molecular.closed",
       "kind": "def",
-      "module": "Paper.MolecularSpace",
-      "file": "Paper/MolecularSpace.lean"
+      "module": "HeytingLean.ATheory.Paper.MolecularSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/MolecularSpace.lean",
+      "line": 255,
+      "family": "Molecular",
+      "snippet": "noncomputable def closed (Atom : Type u) : AssemblySpace.Closed (molSpace (Atom := Atom)) := by\n  simpa [molSpace] using\n    (AssemblySpace.Closed.quotient\n      (S := ObjSyntax.space (Atom := Bond Atom))\n      (ObjSyntax.space.closed (Atom := Bond Atom))\n      (evalIsoSetoid (Atom := Atom)))"
     },
     {
-      "name": "Paper.MolecularSpace.disjointUnion",
+      "name": "HeytingLean.ATheory.Paper.Molecular.assemblyIndex_syntax_eq_dagJoinCount",
+      "id": "HeytingLean.ATheory.Paper.Molecular.assemblyIndex_syntax_eq_dagJoinCount",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.MolecularSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/MolecularSpace.lean",
+      "line": 270,
+      "family": "Molecular",
+      "snippet": "lemma assemblyIndex_syntax_eq_dagJoinCount [DecidableEq Atom] (o : Obj (Bond Atom)) :\n    AssemblySpace.AssemblyIndex.assemblyIndex\n        (S := ObjSyntax.space (Atom := Bond Atom))\n        (hC := ObjSyntax.space.closed (Atom := Bond Atom)) o\n      = Obj.dagJoinCount o := by\n  simpa using"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.Molecular.assemblyIndex_mol_le_dagJoinCount",
+      "id": "HeytingLean.ATheory.Paper.Molecular.assemblyIndex_mol_le_dagJoinCount",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.MolecularSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/MolecularSpace.lean",
+      "line": 278,
+      "family": "Molecular",
+      "snippet": "lemma assemblyIndex_mol_le_dagJoinCount [DecidableEq Atom] (o : Obj (Bond Atom)) :\n    AssemblySpace.AssemblyIndex.assemblyIndex\n        (S := molSpace (Atom := Atom))\n        (hC := closed (Atom := Atom))\n        (Quotient.mk (evalIsoSetoid (Atom := Atom)) o)\n      \u2264 Obj.dagJoinCount o := by"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.StringPerm.spaceRules",
+      "id": "HeytingLean.ATheory.Paper.StringPerm.spaceRules",
       "kind": "def",
-      "module": "Paper.MolecularSpace",
-      "file": "Paper/MolecularSpace.lean"
+      "module": "HeytingLean.ATheory.Paper.StringPermSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/StringPermSpace.lean",
+      "line": 40,
+      "family": "Space",
+      "snippet": "def spaceRules (Allowed : List Atom \u2192 List Atom \u2192 Prop) : Paper.AssemblySpace where\n  \u03a9 := List Atom\n  U := {xs | xs = [] \u2228 \u2203 a, xs = [a]}\n  J := fun x y z => Allowed x y \u2227 List.Perm (x ++ y) z\n\n/-- Default \u201ctotal rule\u201d instance: every pair is joinable. -/"
     },
     {
-      "name": "Paper.MolecularSpace.identify",
+      "name": "HeytingLean.ATheory.Paper.StringPerm.space",
+      "id": "HeytingLean.ATheory.Paper.StringPerm.space",
       "kind": "def",
-      "module": "Paper.MolecularSpace",
-      "file": "Paper/MolecularSpace.lean"
+      "module": "HeytingLean.ATheory.Paper.StringPermSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/StringPermSpace.lean",
+      "line": 46,
+      "family": "Space",
+      "snippet": "def space : Paper.AssemblySpace :=\n  spaceRules (Atom := Atom) (fun _ _ => True)\n\nnamespace spaceRules\n\nvariable {Allowed : List Atom \u2192 List Atom \u2192 Prop}"
     },
     {
-      "name": "Paper.MolecularSpace.IsJoinAtom",
+      "name": "HeytingLean.ATheory.Paper.StringPerm.spaceRules.mem_U_nil",
+      "id": "HeytingLean.ATheory.Paper.StringPerm.spaceRules.mem_U_nil",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.StringPermSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/StringPermSpace.lean",
+      "line": 53,
+      "family": "Space",
+      "snippet": "@[simp] lemma mem_U_nil : ([] : List Atom) \u2208 (spaceRules (Atom := Atom) Allowed).U :=\n  Or.inl rfl\n\n@[simp] lemma mem_U_singleton (a : Atom) : ([a] : List Atom) \u2208 (spaceRules (Atom := Atom) Allowed).U :=\n  Or.inr \u27e8a, rfl\u27e9"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.StringPerm.spaceRules.mem_U_singleton",
+      "id": "HeytingLean.ATheory.Paper.StringPerm.spaceRules.mem_U_singleton",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.StringPermSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/StringPermSpace.lean",
+      "line": 56,
+      "family": "Space",
+      "snippet": "@[simp] lemma mem_U_singleton (a : Atom) : ([a] : List Atom) \u2208 (spaceRules (Atom := Atom) Allowed).U :=\n  Or.inr \u27e8a, rfl\u27e9\n\n/-- Closure holds if the rule predicate is total. -/\nnoncomputable def closed_of_total (hAllowed : \u2200 x y, Allowed x y) :\n    Closed (spaceRules (Atom := Atom) Allowed) := by"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.StringPerm.spaceRules.closed_of_total",
+      "id": "HeytingLean.ATheory.Paper.StringPerm.spaceRules.closed_of_total",
       "kind": "def",
-      "module": "Paper.MolecularSpace",
-      "file": "Paper/MolecularSpace.lean"
+      "module": "HeytingLean.ATheory.Paper.StringPermSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/StringPermSpace.lean",
+      "line": 60,
+      "family": "Space",
+      "snippet": "noncomputable def closed_of_total (hAllowed : \u2200 x y, Allowed x y) :\n    Closed (spaceRules (Atom := Atom) Allowed) := by\n  classical\n  refine \u27e8fun z => ?_\u27e9\n  -- A simple closure witness: for `a :: xs`, build `xs` first, then join `[a]` with `xs`.\n  classical"
     },
     {
-      "name": "Paper.MolecularSpace.disjointUnion",
+      "name": "HeytingLean.ATheory.Paper.StringPerm.space.mem_U_nil",
+      "id": "HeytingLean.ATheory.Paper.StringPerm.space.mem_U_nil",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.StringPermSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/StringPermSpace.lean",
+      "line": 121,
+      "family": "Space",
+      "snippet": "@[simp] lemma mem_U_nil : ([] : List Atom) \u2208 (space (Atom := Atom)).U :=\n  spaceRules.mem_U_nil (Atom := Atom) (Allowed := fun _ _ => True)\n\n@[simp] lemma mem_U_singleton (a : Atom) : ([a] : List Atom) \u2208 (space (Atom := Atom)).U :=\n  spaceRules.mem_U_singleton (Atom := Atom) (Allowed := fun _ _ => True) a"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.StringPerm.space.mem_U_singleton",
+      "id": "HeytingLean.ATheory.Paper.StringPerm.space.mem_U_singleton",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.StringPermSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/StringPermSpace.lean",
+      "line": 124,
+      "family": "Space",
+      "snippet": "@[simp] lemma mem_U_singleton (a : Atom) : ([a] : List Atom) \u2208 (space (Atom := Atom)).U :=\n  spaceRules.mem_U_singleton (Atom := Atom) (Allowed := fun _ _ => True) a\n\nnoncomputable def closed : Closed (space (Atom := Atom)) :=\n  spaceRules.closed_of_total (Atom := Atom) (Allowed := fun _ _ => True) (by intro x y; trivial)"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.StringPerm.space.closed",
+      "id": "HeytingLean.ATheory.Paper.StringPerm.space.closed",
       "kind": "def",
-      "module": "Paper.MolecularSpace",
-      "file": "Paper/MolecularSpace.lean"
+      "module": "HeytingLean.ATheory.Paper.StringPermSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/StringPermSpace.lean",
+      "line": 127,
+      "family": "Space",
+      "snippet": "noncomputable def closed : Closed (space (Atom := Atom)) :=\n  spaceRules.closed_of_total (Atom := Atom) (Allowed := fun _ _ => True) (by intro x y; trivial)\n\nend space\n\n/-! ## Flattening syntax objects into strings -/"
     },
     {
-      "name": "Paper.MolecularSpace.join",
+      "name": "HeytingLean.ATheory.Paper.StringPerm.flatten",
+      "id": "HeytingLean.ATheory.Paper.StringPerm.flatten",
       "kind": "def",
-      "module": "Paper.MolecularSpace",
-      "file": "Paper/MolecularSpace.lean"
+      "module": "HeytingLean.ATheory.Paper.StringPermSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/StringPermSpace.lean",
+      "line": 134,
+      "family": "Space",
+      "snippet": "def flatten : Obj Atom \u2192 List Atom\n  | Obj.base a => [a]\n  | Obj.join l r => flatten l ++ flatten r\n\n@[simp] lemma flatten_base (a : Atom) : flatten (Atom := Atom) (Obj.base a) = [a] := rfl"
     },
     {
-      "name": "Paper.MolecularSpace.evalBond",
+      "name": "HeytingLean.ATheory.Paper.StringPerm.flatten_base",
+      "id": "HeytingLean.ATheory.Paper.StringPerm.flatten_base",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.StringPermSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/StringPermSpace.lean",
+      "line": 138,
+      "family": "Space",
+      "snippet": "@[simp] lemma flatten_base (a : Atom) : flatten (Atom := Atom) (Obj.base a) = [a] := rfl\n\n@[simp] lemma flatten_join (l r : Obj Atom) :\n    flatten (Atom := Atom) (Obj.join l r) = flatten (Atom := Atom) l ++ flatten (Atom := Atom) r := rfl\n\n/-! ## Mapping ObjSyntax paths to StringPerm paths -/"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.StringPerm.flatten_join",
+      "id": "HeytingLean.ATheory.Paper.StringPerm.flatten_join",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.StringPermSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/StringPermSpace.lean",
+      "line": 140,
+      "family": "Space",
+      "snippet": "@[simp] lemma flatten_join (l r : Obj Atom) :\n    flatten (Atom := Atom) (Obj.join l r) = flatten (Atom := Atom) l ++ flatten (Atom := Atom) r := rfl\n\n/-! ## Mapping ObjSyntax paths to StringPerm paths -/\n\nnamespace ObjSyntaxMap"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.StringPerm.ObjSyntaxMap.mapStep",
+      "id": "HeytingLean.ATheory.Paper.StringPerm.ObjSyntaxMap.mapStep",
       "kind": "def",
-      "module": "Paper.MolecularSpace",
-      "file": "Paper/MolecularSpace.lean"
+      "module": "HeytingLean.ATheory.Paper.StringPermSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/StringPermSpace.lean",
+      "line": 149,
+      "family": "Space",
+      "snippet": "private def mapStep (s : Step (ObjSyntax.space (Atom := Atom))) :\n    Step (space (Atom := Atom)) :=\n  { x := flatten (Atom := Atom) s.x\n    y := flatten (Atom := Atom) s.y\n    z := flatten (Atom := Atom) s.z\n    ok := by"
     },
     {
-      "name": "Paper.MolecularSpace.evalObj",
+      "name": "HeytingLean.ATheory.Paper.StringPerm.ObjSyntaxMap.map_wf_aux",
+      "id": "HeytingLean.ATheory.Paper.StringPerm.ObjSyntaxMap.map_wf_aux",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.StringPermSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/StringPermSpace.lean",
+      "line": 169,
+      "family": "Space",
+      "snippet": "private lemma map_wf_aux (A : Set (Obj Atom)) (A' : Set (List Atom))\n    (hAA' : \u2200 t, t \u2208 A \u2192 flatten (Atom := Atom) t \u2208 A') :\n    \u2200 {steps : List (Step (ObjSyntax.space (Atom := Atom)))},\n      WellFormedFrom (S := ObjSyntax.space (Atom := Atom)) A steps \u2192\n      WellFormedFrom (S := space (Atom := Atom)) A' (steps.map mapStep) := by\n  intro steps"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.StringPerm.ObjSyntaxMap.map_wf",
+      "id": "HeytingLean.ATheory.Paper.StringPerm.ObjSyntaxMap.map_wf",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.StringPermSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/StringPermSpace.lean",
+      "line": 194,
+      "family": "Space",
+      "snippet": "private lemma map_wf (p : AssemblyPath (S := ObjSyntax.space (Atom := Atom)) (o : Obj Atom)) :\n    WellFormedFrom (S := space (Atom := Atom)) (space (Atom := Atom)).U (p.steps.map mapStep) := by\n  -- Base mapping property: primitives map to singletons.\n  have hU : \u2200 t, t \u2208 (ObjSyntax.space (Atom := Atom)).U \u2192\n      flatten (Atom := Atom) t \u2208 (space (Atom := Atom)).U := by\n    intro t ht"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.StringPerm.ObjSyntaxMap.map_ok_out",
+      "id": "HeytingLean.ATheory.Paper.StringPerm.ObjSyntaxMap.map_ok_out",
+      "kind": "lemma",
+      "module": "HeytingLean.ATheory.Paper.StringPermSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/StringPermSpace.lean",
+      "line": 206,
+      "family": "Space",
+      "snippet": "private lemma map_ok_out\n    (p : AssemblyPath (S := ObjSyntax.space (Atom := Atom)) (o : Obj Atom)) :\n    ((p.steps.map mapStep) = [] \u2227 flatten (Atom := Atom) o \u2208 (space (Atom := Atom)).U) \u2228\n      (\u2203 s, (p.steps.map mapStep).getLast? = some s \u2227 s.z = flatten (Atom := Atom) o) := by\n  rcases p.ok_out with \u27e8hsteps, hoU\u27e9 | \u27e8s, hsLast, hsZ\u27e9\n  \u00b7 left"
+    },
+    {
+      "name": "HeytingLean.ATheory.Paper.StringPerm.ObjSyntaxMap.mapPath",
+      "id": "HeytingLean.ATheory.Paper.StringPerm.ObjSyntaxMap.mapPath",
       "kind": "def",
-      "module": "Paper.MolecularSpace",
-      "file": "Paper/MolecularSpace.lean"
+      "module": "HeytingLean.ATheory.Paper.StringPermSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/StringPermSpace.lean",
+      "line": 231,
+      "family": "Space",
+      "snippet": "noncomputable def mapPath\n    (p : AssemblyPath (S := ObjSyntax.space (Atom := Atom)) (o : Obj Atom)) :\n    AssemblyPath (S := space (Atom := Atom)) (flatten (Atom := Atom) o) :=\n  { steps := p.steps.map mapStep\n    wf := map_wf (Atom := Atom) p\n    ok_out := map_ok_out (Atom := Atom) p }"
     },
     {
-      "name": "Paper.MolecularSpace.evalCore",
-      "kind": "def",
-      "module": "Paper.MolecularSpace",
-      "file": "Paper/MolecularSpace.lean"
-    },
-    {
-      "name": "Paper.MolecularSpace.evalIsoRel",
-      "kind": "def",
-      "module": "Paper.MolecularSpace",
-      "file": "Paper/MolecularSpace.lean"
-    },
-    {
-      "name": "Paper.MolecularSpace.evalIsoSetoid",
-      "kind": "def",
-      "module": "Paper.MolecularSpace",
-      "file": "Paper/MolecularSpace.lean"
-    },
-    {
-      "name": "Paper.MolecularSpace.molSpace",
-      "kind": "def",
-      "module": "Paper.MolecularSpace",
-      "file": "Paper/MolecularSpace.lean"
-    },
-    {
-      "name": "Paper.MolecularSpace.closed",
-      "kind": "def",
-      "module": "Paper.MolecularSpace",
-      "file": "Paper/MolecularSpace.lean"
-    },
-    {
-      "name": "Paper.MolecularSpace.Bond",
-      "kind": "structure",
-      "module": "Paper.MolecularSpace",
-      "file": "Paper/MolecularSpace.lean"
-    },
-    {
-      "name": "Paper.MolecularSpace.MolGraph",
-      "kind": "structure",
-      "module": "Paper.MolecularSpace",
-      "file": "Paper/MolecularSpace.lean"
-    },
-    {
-      "name": "Paper.MolecularSpace.MolState",
-      "kind": "structure",
-      "module": "Paper.MolecularSpace",
-      "file": "Paper/MolecularSpace.lean"
-    },
-    {
-      "name": "Paper.MolecularSpace.as",
-      "kind": "instance",
-      "module": "Paper.MolecularSpace",
-      "file": "Paper/MolecularSpace.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.exists_len_of_closed",
+      "name": "HeytingLean.ATheory.Paper.StringPerm.assemblyIndex_flatten_le_dagJoinCount",
+      "id": "HeytingLean.ATheory.Paper.StringPerm.assemblyIndex_flatten_le_dagJoinCount",
       "kind": "lemma",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.assemblyIndex_spec",
-      "kind": "lemma",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.assemblyIndex_le_of_hasLen",
-      "kind": "lemma",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.assemblyIndex_le_of_path",
-      "kind": "lemma",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.assemblyIndex_eq_zero_iff",
-      "kind": "lemma",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.mem_U_primitive",
-      "kind": "lemma",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.mem_availableAfter_of_mem_steps",
-      "kind": "lemma",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.reuseAwareSteps_z_not_mem",
-      "kind": "lemma",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.reuseAwareSteps_wf",
-      "kind": "lemma",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.joinCount_le_of_mem_subobjects",
-      "kind": "lemma",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.join_not_mem_subobjects_left",
-      "kind": "lemma",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.join_not_mem_subobjects_right",
-      "kind": "lemma",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.reuseAwareSteps_z_mem_subobjects",
-      "kind": "lemma",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.reuseAwareSteps_z_isJoin",
-      "kind": "lemma",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.reuseAwareSteps_nodup_z",
-      "kind": "lemma",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.reuseAwareSteps_len_le_dagJoinCount",
-      "kind": "lemma",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.closed",
-      "kind": "lemma",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.assemblyIndex_le_joinCount",
-      "kind": "lemma",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.assemblyIndex_le_dagJoinCount",
-      "kind": "lemma",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.join_not_mem_U",
-      "kind": "lemma",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.exists_step_of_mem_availableAfter",
-      "kind": "lemma",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.step_inputs_mem_availableAfter",
-      "kind": "lemma",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.join_components_mem_availableAfter",
-      "kind": "lemma",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.subobjects_mem_availableAfter_of_mem",
-      "kind": "lemma",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.join_subobj_mem_step_outputs",
-      "kind": "lemma",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.dagJoinCount_le_path_len",
-      "kind": "lemma",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.assemblyIndex_eq_dagJoinCount",
-      "kind": "lemma",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.HasPathLen",
-      "kind": "def",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.assemblyIndex",
-      "kind": "def",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.space",
-      "kind": "def",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.primitive",
-      "kind": "def",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.canonicalSteps",
-      "kind": "def",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.canonicalPath",
-      "kind": "def",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.reuseAwareSteps",
-      "kind": "def",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblyIndex.reuseAwarePath",
-      "kind": "def",
-      "module": "Paper.AssemblyIndex",
-      "file": "Paper/AssemblyIndex.lean"
-    },
-    {
-      "name": "Paper.AssemblySpace.AssemblySpace",
-      "kind": "structure",
-      "module": "Paper.AssemblySpace",
-      "file": "Paper/AssemblySpace.lean"
-    },
-    {
-      "name": "Paper.StringPermSpace.mem_U_nil",
-      "kind": "lemma",
-      "module": "Paper.StringPermSpace",
-      "file": "Paper/StringPermSpace.lean"
-    },
-    {
-      "name": "Paper.StringPermSpace.mem_U_singleton",
-      "kind": "lemma",
-      "module": "Paper.StringPermSpace",
-      "file": "Paper/StringPermSpace.lean"
-    },
-    {
-      "name": "Paper.StringPermSpace.mem_U_nil",
-      "kind": "lemma",
-      "module": "Paper.StringPermSpace",
-      "file": "Paper/StringPermSpace.lean"
-    },
-    {
-      "name": "Paper.StringPermSpace.mem_U_singleton",
-      "kind": "lemma",
-      "module": "Paper.StringPermSpace",
-      "file": "Paper/StringPermSpace.lean"
-    },
-    {
-      "name": "Paper.StringPermSpace.flatten_base",
-      "kind": "lemma",
-      "module": "Paper.StringPermSpace",
-      "file": "Paper/StringPermSpace.lean"
-    },
-    {
-      "name": "Paper.StringPermSpace.flatten_join",
-      "kind": "lemma",
-      "module": "Paper.StringPermSpace",
-      "file": "Paper/StringPermSpace.lean"
-    },
-    {
-      "name": "Paper.StringPermSpace.map_wf_aux",
-      "kind": "lemma",
-      "module": "Paper.StringPermSpace",
-      "file": "Paper/StringPermSpace.lean"
-    },
-    {
-      "name": "Paper.StringPermSpace.map_wf",
-      "kind": "lemma",
-      "module": "Paper.StringPermSpace",
-      "file": "Paper/StringPermSpace.lean"
-    },
-    {
-      "name": "Paper.StringPermSpace.map_ok_out",
-      "kind": "lemma",
-      "module": "Paper.StringPermSpace",
-      "file": "Paper/StringPermSpace.lean"
-    },
-    {
-      "name": "Paper.StringPermSpace.assemblyIndex_flatten_le_dagJoinCount",
-      "kind": "lemma",
-      "module": "Paper.StringPermSpace",
-      "file": "Paper/StringPermSpace.lean"
-    },
-    {
-      "name": "Paper.StringPermSpace.spaceRules",
-      "kind": "def",
-      "module": "Paper.StringPermSpace",
-      "file": "Paper/StringPermSpace.lean"
-    },
-    {
-      "name": "Paper.StringPermSpace.space",
-      "kind": "def",
-      "module": "Paper.StringPermSpace",
-      "file": "Paper/StringPermSpace.lean"
-    },
-    {
-      "name": "Paper.StringPermSpace.closed_of_total",
-      "kind": "def",
-      "module": "Paper.StringPermSpace",
-      "file": "Paper/StringPermSpace.lean"
-    },
-    {
-      "name": "Paper.StringPermSpace.closed",
-      "kind": "def",
-      "module": "Paper.StringPermSpace",
-      "file": "Paper/StringPermSpace.lean"
-    },
-    {
-      "name": "Paper.StringPermSpace.flatten",
-      "kind": "def",
-      "module": "Paper.StringPermSpace",
-      "file": "Paper/StringPermSpace.lean"
-    },
-    {
-      "name": "Paper.StringPermSpace.mapStep",
-      "kind": "def",
-      "module": "Paper.StringPermSpace",
-      "file": "Paper/StringPermSpace.lean"
-    },
-    {
-      "name": "Paper.StringPermSpace.mapPath",
-      "kind": "def",
-      "module": "Paper.StringPermSpace",
-      "file": "Paper/StringPermSpace.lean"
-    },
-    {
-      "name": "Paper.AssemblyQuotient.mk_mem_U",
-      "kind": "lemma",
-      "module": "Paper.AssemblyQuotient",
-      "file": "Paper/AssemblyQuotient.lean"
-    },
-    {
-      "name": "Paper.AssemblyQuotient.map_wf_aux",
-      "kind": "lemma",
-      "module": "Paper.AssemblyQuotient",
-      "file": "Paper/AssemblyQuotient.lean"
-    },
-    {
-      "name": "Paper.AssemblyQuotient.map_wf",
-      "kind": "lemma",
-      "module": "Paper.AssemblyQuotient",
-      "file": "Paper/AssemblyQuotient.lean"
-    },
-    {
-      "name": "Paper.AssemblyQuotient.map_ok_out",
-      "kind": "lemma",
-      "module": "Paper.AssemblyQuotient",
-      "file": "Paper/AssemblyQuotient.lean"
-    },
-    {
-      "name": "Paper.AssemblyQuotient.assemblyIndex_quotient_le",
-      "kind": "lemma",
-      "module": "Paper.AssemblyQuotient",
-      "file": "Paper/AssemblyQuotient.lean"
-    },
-    {
-      "name": "Paper.AssemblyQuotient.quotient",
-      "kind": "def",
-      "module": "Paper.AssemblyQuotient",
-      "file": "Paper/AssemblyQuotient.lean"
-    },
-    {
-      "name": "Paper.AssemblyQuotient.liftSet",
-      "kind": "def",
-      "module": "Paper.AssemblyQuotient",
-      "file": "Paper/AssemblyQuotient.lean"
-    },
-    {
-      "name": "Paper.AssemblyQuotient.mapStep",
-      "kind": "def",
-      "module": "Paper.AssemblyQuotient",
-      "file": "Paper/AssemblyQuotient.lean"
-    },
-    {
-      "name": "Paper.AssemblyQuotient.mapPath",
-      "kind": "def",
-      "module": "Paper.AssemblyQuotient",
-      "file": "Paper/AssemblyQuotient.lean"
-    },
-    {
-      "name": "Paper.AssemblyQuotient.quotient",
-      "kind": "def",
-      "module": "Paper.AssemblyQuotient",
-      "file": "Paper/AssemblyQuotient.lean"
-    },
-    {
-      "name": "Paper.AssemblyPath.wellFormedFrom_nil",
-      "kind": "lemma",
-      "module": "Paper.AssemblyPath",
-      "file": "Paper/AssemblyPath.lean"
-    },
-    {
-      "name": "Paper.AssemblyPath.availableAfter_nil",
-      "kind": "lemma",
-      "module": "Paper.AssemblyPath",
-      "file": "Paper/AssemblyPath.lean"
-    },
-    {
-      "name": "Paper.AssemblyPath.availableAfter_cons",
-      "kind": "lemma",
-      "module": "Paper.AssemblyPath",
-      "file": "Paper/AssemblyPath.lean"
-    },
-    {
-      "name": "Paper.AssemblyPath.wellFormedFrom_append",
-      "kind": "lemma",
-      "module": "Paper.AssemblyPath",
-      "file": "Paper/AssemblyPath.lean"
-    },
-    {
-      "name": "Paper.AssemblyPath.wellFormedFrom_mono",
-      "kind": "lemma",
-      "module": "Paper.AssemblyPath",
-      "file": "Paper/AssemblyPath.lean"
-    },
-    {
-      "name": "Paper.AssemblyPath.availableAfter_append",
-      "kind": "lemma",
-      "module": "Paper.AssemblyPath",
-      "file": "Paper/AssemblyPath.lean"
-    },
-    {
-      "name": "Paper.AssemblyPath.subset_availableAfter",
-      "kind": "lemma",
-      "module": "Paper.AssemblyPath",
-      "file": "Paper/AssemblyPath.lean"
-    },
-    {
-      "name": "Paper.AssemblyPath.availableAfter_mono",
-      "kind": "lemma",
-      "module": "Paper.AssemblyPath",
-      "file": "Paper/AssemblyPath.lean"
-    },
-    {
-      "name": "Paper.AssemblyPath.mem_availableAfter_of_getLast",
-      "kind": "lemma",
-      "module": "Paper.AssemblyPath",
-      "file": "Paper/AssemblyPath.lean"
-    },
-    {
-      "name": "Paper.AssemblyPath.len_mk",
-      "kind": "lemma",
-      "module": "Paper.AssemblyPath",
-      "file": "Paper/AssemblyPath.lean"
-    },
-    {
-      "name": "Paper.AssemblyPath.primitive_len",
-      "kind": "lemma",
-      "module": "Paper.AssemblyPath",
-      "file": "Paper/AssemblyPath.lean"
-    },
-    {
-      "name": "Paper.AssemblyPath.mem_availableAfter",
-      "kind": "lemma",
-      "module": "Paper.AssemblyPath",
-      "file": "Paper/AssemblyPath.lean"
-    },
-    {
-      "name": "Paper.AssemblyPath.Step",
-      "kind": "def",
-      "module": "Paper.AssemblyPath",
-      "file": "Paper/AssemblyPath.lean"
-    },
-    {
-      "name": "Paper.AssemblyPath.WellFormedFrom",
-      "kind": "def",
-      "module": "Paper.AssemblyPath",
-      "file": "Paper/AssemblyPath.lean"
-    },
-    {
-      "name": "Paper.AssemblyPath.availableAfter",
-      "kind": "def",
-      "module": "Paper.AssemblyPath",
-      "file": "Paper/AssemblyPath.lean"
-    },
-    {
-      "name": "Paper.AssemblyPath.len",
-      "kind": "def",
-      "module": "Paper.AssemblyPath",
-      "file": "Paper/AssemblyPath.lean"
-    },
-    {
-      "name": "Paper.AssemblyPath.primitive",
-      "kind": "def",
-      "module": "Paper.AssemblyPath",
-      "file": "Paper/AssemblyPath.lean"
-    },
-    {
-      "name": "Paper.AssemblyPath.Step",
-      "kind": "structure",
-      "module": "Paper.AssemblyPath",
-      "file": "Paper/AssemblyPath.lean"
-    },
-    {
-      "name": "Paper.AssemblyPath.AssemblyPath",
-      "kind": "structure",
-      "module": "Paper.AssemblyPath",
-      "file": "Paper/AssemblyPath.lean"
-    },
-    {
-      "name": "Paper.AssemblyPath.Closed",
-      "kind": "structure",
-      "module": "Paper.AssemblyPath",
-      "file": "Paper/AssemblyPath.lean"
+      "module": "HeytingLean.ATheory.Paper.StringPermSpace",
+      "path": "RESEARCHER_BUNDLE/HeytingLean/ATheory/Paper/StringPermSpace.lean",
+      "line": 242,
+      "family": "Space",
+      "snippet": "lemma assemblyIndex_flatten_le_dagJoinCount [DecidableEq Atom] (o : Obj Atom) :\n    AssemblyIndex.assemblyIndex (S := space (Atom := Atom)) (hC := space.closed (Atom := Atom))\n        (flatten (Atom := Atom) o)\n      \u2264 Obj.dagJoinCount o := by\n  classical\n  -- Pick a minimal ObjSyntax path for `o` and map it."
     }
   ]
 }
