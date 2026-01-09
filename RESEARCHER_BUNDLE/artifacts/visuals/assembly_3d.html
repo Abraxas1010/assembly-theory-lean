@@ -91,7 +91,7 @@
         const s = 2 / Math.max(1e-6, (maxx-minx), (maxy-miny), (maxz-minz))
         const xyz = pts.map(p => ({ x:(p.x-cx)*s, y:(p.y-cy)*s, z:(p.z-cz)*s }))
 
-        const geom = new THREE.SphereGeometry(0.020, 14, 14)
+        const geom = new THREE.SphereGeometry(0.016, 14, 14)
         const meshes = []
         for (let i=0;i<items.length;i++){
           const it = items[i]
@@ -116,10 +116,12 @@
         const edgeGeom = new THREE.BufferGeometry()
         edgeGeom.setAttribute('position', new THREE.Float32BufferAttribute(seg, 3))
         const edgeMat = new THREE.LineBasicMaterial({
-          color: 0xcfd8dc,
+          color: 0xffffff,
           transparent: true,
-          opacity: 0.65,
-          depthTest: false
+          opacity: 0.95,
+          depthTest: false,
+          depthWrite: false,
+          blending: THREE.AdditiveBlending
         })
         const edgeLines = new THREE.LineSegments(edgeGeom, edgeMat)
         edgeLines.renderOrder = 0

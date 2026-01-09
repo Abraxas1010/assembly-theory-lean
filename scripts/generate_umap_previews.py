@@ -150,7 +150,7 @@ def generate_2d_preview(decls, coords, out_path):
                 x2, y2 = norm_coords[j]
                 svg_lines.append(
                     f'<line x1="{x1:.2f}" y1="{y1:.2f}" x2="{x2:.2f}" y2="{y2:.2f}" '
-                    f'stroke="#90a4ae" stroke-opacity="0.30" stroke-width="1.25"/>'
+                    f'stroke="#cfd8dc" stroke-opacity="0.50" stroke-width="1.75"/>'
                 )
 
     # Add points
@@ -269,7 +269,7 @@ def generate_3d_animated_preview(decls, coords_3d, out_path):
                 a, b = (i, int(j)) if i < int(j) else (int(j), i)
                 edges.add((a, b))
 
-        svg_lines.append('<g stroke="#90a4ae" stroke-opacity="0.22" stroke-width="1">')
+        svg_lines.append('<g stroke="#cfd8dc" stroke-opacity="0.45" stroke-width="2">')
         for a, b in sorted(edges):
             svg_lines.append(f'<line x1="{pxs[a][0]}" y1="{pys[a][0]}" x2="{pxs[b][0]}" y2="{pys[b][0]}">')
             svg_lines.append(f'  <animate attributeName="x1" dur="{duration}s" repeatCount="indefinite" values="{";".join(pxs[a])}"/>')
