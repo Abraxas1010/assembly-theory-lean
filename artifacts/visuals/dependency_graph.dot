@@ -1,0 +1,23 @@
+digraph AssemblyTheory {
+  rankdir=TB;
+  node [shape=box, style=filled, fillcolor=lightblue];
+  subgraph cluster_Paper {
+    label="Paper";
+    "Paper.AssemblyPath" [label="AssemblyPath"];
+    "Paper.AssemblyQuotient" [label="AssemblyQuotient"];
+    "Paper.AssemblyIndex" [label="AssemblyIndex"];
+    "Paper.AssemblyBounds" [label="AssemblyBounds"];
+    "Paper.StringPermSpace" [label="StringPermSpace"];
+    "Paper.HypergraphSpace" [label="HypergraphSpace"];
+    "Paper.AssemblySpace" [label="AssemblySpace"];
+    "Paper.MolecularSpace" [label="MolecularSpace"];
+  }
+  subgraph cluster_CopyNumberSelection {
+    label="CopyNumberSelection";
+    "CopyNumberSelection" [label="CopyNumberSelection"];
+  }
+  subgraph cluster_AssemblyCore {
+    label="AssemblyCore";
+    "AssemblyCore" [label="AssemblyCore"];
+  }
+}

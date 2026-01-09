@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bg3d" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f23"/>
+      <stop offset="100%" style="stop-color:#1a1a3e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:rgba(52,152,219,0.3)"/>
+      <stop offset="100%" style="stop-color:rgba(52,152,219,0)"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="400" height="300" fill="url(#bg3d)" rx="8"/>
+
+  <!-- Glow effect -->
+  <ellipse cx="200" cy="150" rx="150" ry="100" fill="url(#glow)"/>
+
+  <text x="200" y="30" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#e8e8e8">
+    Assembly Theory 3D Proof Map
+  </text>
+
+  <!-- 3D-looking scattered points with depth -->
+  <!-- Back layer (smaller, dimmer) -->
+  <circle cx="100" cy="100" r="3" fill="#3498db" opacity="0.4"/>
+  <circle cx="120" cy="90" r="2" fill="#2ecc71" opacity="0.4"/>
+  <circle cx="300" cy="110" r="3" fill="#e74c3c" opacity="0.4"/>
+  <circle cx="280" cy="95" r="2" fill="#9b59b6" opacity="0.4"/>
+
+  <!-- Middle layer -->
+  <circle cx="150" cy="140" r="5" fill="#3498db" opacity="0.7"/>
+  <circle cx="180" cy="130" r="4" fill="#2ecc71" opacity="0.7"/>
+  <circle cx="200" cy="150" r="6" fill="#e74c3c" opacity="0.7"/>
+  <circle cx="230" cy="145" r="5" fill="#9b59b6" opacity="0.7"/>
+  <circle cx="260" cy="160" r="4" fill="#1abc9c" opacity="0.7"/>
+
+  <!-- Front layer (larger, brighter) -->
+  <circle cx="130" cy="180" r="7" fill="#3498db" opacity="0.9"/>
+  <circle cx="160" cy="200" r="8" fill="#2ecc71" opacity="0.9"/>
+  <circle cx="200" cy="190" r="9" fill="#f39c12" opacity="0.9"/>
+  <circle cx="240" cy="210" r="7" fill="#e74c3c" opacity="0.9"/>
+  <circle cx="280" cy="195" r="8" fill="#1abc9c" opacity="0.9"/>
+
+  <!-- Connection lines suggesting 3D depth -->
+  <line x1="100" y1="100" x2="130" y2="180" stroke="#3498db" stroke-width="0.5" opacity="0.3"/>
+  <line x1="200" y1="150" x2="200" y2="190" stroke="#e74c3c" stroke-width="0.5" opacity="0.3"/>
+  <line x1="260" y1="160" x2="280" y2="195" stroke="#1abc9c" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Axis hints -->
+  <line x1="50" y1="250" x2="100" y2="250" stroke="#666" stroke-width="1"/>
+  <line x1="50" y1="250" x2="50" y2="200" stroke="#666" stroke-width="1"/>
+  <line x1="50" y1="250" x2="80" y2="230" stroke="#666" stroke-width="1"/>
+  <text x="105" y="254" font-family="Arial" font-size="8" fill="#666">x</text>
+  <text x="45" y="195" font-family="Arial" font-size="8" fill="#666">y</text>
+  <text x="85" y="225" font-family="Arial" font-size="8" fill="#666">z</text>
+
+  <text x="200" y="55" text-anchor="middle" font-family="Arial" font-size="10" fill="#888">
+    Click to open interactive 3D view
+  </text>
+
+  <text x="200" y="280" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">
+    Rotate, zoom, and explore proof clusters
+  </text>
+</svg>

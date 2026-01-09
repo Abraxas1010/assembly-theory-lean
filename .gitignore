@@ -1,0 +1,31 @@
+# Lean build artifacts
+build/
+.lake/
+lake-packages/
+lake-manifest.json
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+
+# Reports (generated)
+RESEARCHER_BUNDLE/reports/*.txt
+RESEARCHER_BUNDLE/reports/*.log
+
+# Temporary files
+*.tmp
+*.bak

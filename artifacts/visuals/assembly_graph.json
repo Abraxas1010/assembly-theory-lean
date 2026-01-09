@@ -1,0 +1,1046 @@
+{
+  "nodes": [
+    {
+      "id": "Paper.AssemblyPath",
+      "name": "Paper.AssemblyPath",
+      "type": "module"
+    },
+    {
+      "id": "Paper.AssemblyQuotient",
+      "name": "Paper.AssemblyQuotient",
+      "type": "module"
+    },
+    {
+      "id": "Paper.AssemblyIndex",
+      "name": "Paper.AssemblyIndex",
+      "type": "module"
+    },
+    {
+      "id": "Paper.AssemblyBounds",
+      "name": "Paper.AssemblyBounds",
+      "type": "module"
+    },
+    {
+      "id": "Paper.StringPermSpace",
+      "name": "Paper.StringPermSpace",
+      "type": "module"
+    },
+    {
+      "id": "CopyNumberSelection",
+      "name": "CopyNumberSelection",
+      "type": "module"
+    },
+    {
+      "id": "AssemblyCore",
+      "name": "AssemblyCore",
+      "type": "module"
+    },
+    {
+      "id": "Paper.HypergraphSpace",
+      "name": "Paper.HypergraphSpace",
+      "type": "module"
+    },
+    {
+      "id": "Paper.AssemblySpace",
+      "name": "Paper.AssemblySpace",
+      "type": "module"
+    },
+    {
+      "id": "Paper.MolecularSpace",
+      "name": "Paper.MolecularSpace",
+      "type": "module"
+    }
+  ],
+  "edges": [
+    {
+      "source": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "target": "Paper.HypergraphSpace"
+    },
+    {
+      "source": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "target": "Paper.AssemblyBounds"
+    },
+    {
+      "source": "HeytingLean.ATheory.AssemblyCore",
+      "target": "Paper.MolecularSpace"
+    },
+    {
+      "source": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "target": "Paper.MolecularSpace"
+    },
+    {
+      "source": "HeytingLean.ATheory.Paper.AssemblyQuotient",
+      "target": "Paper.MolecularSpace"
+    },
+    {
+      "source": "HeytingLean.ATheory.Paper.AssemblyPath",
+      "target": "Paper.AssemblyIndex"
+    },
+    {
+      "source": "HeytingLean.ATheory.AssemblyCore",
+      "target": "Paper.AssemblyIndex"
+    },
+    {
+      "source": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "target": "Paper.StringPermSpace"
+    },
+    {
+      "source": "HeytingLean.ATheory.Paper.AssemblyIndex",
+      "target": "Paper.AssemblyQuotient"
+    },
+    {
+      "source": "HeytingLean.ATheory.Paper.AssemblySpace",
+      "target": "Paper.AssemblyPath"
+    }
+  ],
+  "declarations": [
+    {
+      "name": "CopyNumberSelection.monotone_in_mu",
+      "kind": "lemma",
+      "module": "CopyNumberSelection",
+      "file": "CopyNumberSelection.lean"
+    },
+    {
+      "name": "CopyNumberSelection.monotone_in_idx",
+      "kind": "lemma",
+      "module": "CopyNumberSelection",
+      "file": "CopyNumberSelection.lean"
+    },
+    {
+      "name": "CopyNumberSelection.mono_in_Theta",
+      "kind": "lemma",
+      "module": "CopyNumberSelection",
+      "file": "CopyNumberSelection.lean"
+    },
+    {
+      "name": "CopyNumberSelection.mono_in_tau",
+      "kind": "lemma",
+      "module": "CopyNumberSelection",
+      "file": "CopyNumberSelection.lean"
+    },
+    {
+      "name": "CopyNumberSelection.AssemblyEnsemble_empty",
+      "kind": "lemma",
+      "module": "CopyNumberSelection",
+      "file": "CopyNumberSelection.lean"
+    },
+    {
+      "name": "CopyNumberSelection.AssemblyEnsemble_zero_total",
+      "kind": "lemma",
+      "module": "CopyNumberSelection",
+      "file": "CopyNumberSelection.lean"
+    },
+    {
+      "name": "CopyNumberSelection.nullTail",
+      "kind": "def",
+      "module": "CopyNumberSelection",
+      "file": "CopyNumberSelection.lean"
+    },
+    {
+      "name": "CopyNumberSelection.Assembly",
+      "kind": "def",
+      "module": "CopyNumberSelection",
+      "file": "CopyNumberSelection.lean"
+    },
+    {
+      "name": "CopyNumberSelection.selected",
+      "kind": "def",
+      "module": "CopyNumberSelection",
+      "file": "CopyNumberSelection.lean"
+    },
+    {
+      "name": "CopyNumberSelection.AssemblyEnsemble",
+      "kind": "def",
+      "module": "CopyNumberSelection",
+      "file": "CopyNumberSelection.lean"
+    },
+    {
+      "name": "CopyNumberSelection.CopyNumber",
+      "kind": "structure",
+      "module": "CopyNumberSelection",
+      "file": "CopyNumberSelection.lean"
+    },
+    {
+      "name": "AssemblyCore.dagJoinCount_le_joinCount",
+      "kind": "theorem",
+      "module": "AssemblyCore",
+      "file": "AssemblyCore.lean"
+    },
+    {
+      "name": "AssemblyCore.isJoin_iff",
+      "kind": "lemma",
+      "module": "AssemblyCore",
+      "file": "AssemblyCore.lean"
+    },
+    {
+      "name": "AssemblyCore.trivial_len",
+      "kind": "lemma",
+      "module": "AssemblyCore",
+      "file": "AssemblyCore.lean"
+    },
+    {
+      "name": "AssemblyCore.subobjects",
+      "kind": "def",
+      "module": "AssemblyCore",
+      "file": "AssemblyCore.lean"
+    },
+    {
+      "name": "AssemblyCore.isJoin",
+      "kind": "def",
+      "module": "AssemblyCore",
+      "file": "AssemblyCore.lean"
+    },
+    {
+      "name": "AssemblyCore.joinCount",
+      "kind": "def",
+      "module": "AssemblyCore",
+      "file": "AssemblyCore.lean"
+    },
+    {
+      "name": "AssemblyCore.dagJoinCount",
+      "kind": "def",
+      "module": "AssemblyCore",
+      "file": "AssemblyCore.lean"
+    },
+    {
+      "name": "AssemblyCore.trivial",
+      "kind": "def",
+      "module": "AssemblyCore",
+      "file": "AssemblyCore.lean"
+    },
+    {
+      "name": "AssemblyCore.canonicalPath",
+      "kind": "def",
+      "module": "AssemblyCore",
+      "file": "AssemblyCore.lean"
+    },
+    {
+      "name": "AssemblyCore.assemblyIndex",
+      "kind": "def",
+      "module": "AssemblyCore",
+      "file": "AssemblyCore.lean"
+    },
+    {
+      "name": "AssemblyCore.birthAT",
+      "kind": "def",
+      "module": "AssemblyCore",
+      "file": "AssemblyCore.lean"
+    },
+    {
+      "name": "AssemblyCore.Alphabet",
+      "kind": "structure",
+      "module": "AssemblyCore",
+      "file": "AssemblyCore.lean"
+    },
+    {
+      "name": "AssemblyCore.Rules",
+      "kind": "structure",
+      "module": "AssemblyCore",
+      "file": "AssemblyCore.lean"
+    },
+    {
+      "name": "AssemblyCore.Path",
+      "kind": "structure",
+      "module": "AssemblyCore",
+      "file": "AssemblyCore.lean"
+    },
+    {
+      "name": "AssemblyCore.Obj",
+      "kind": "inductive",
+      "module": "AssemblyCore",
+      "file": "AssemblyCore.lean"
+    },
+    {
+      "name": "Paper.HypergraphSpace.hyperIndex_spec",
+      "kind": "lemma",
+      "module": "Paper.HypergraphSpace",
+      "file": "Paper/HypergraphSpace.lean"
+    },
+    {
+      "name": "Paper.HypergraphSpace.hyperIndex_le_of_hasLen",
+      "kind": "lemma",
+      "module": "Paper.HypergraphSpace",
+      "file": "Paper/HypergraphSpace.lean"
+    },
+    {
+      "name": "Paper.HypergraphSpace.hyperIndex_le_of_path",
+      "kind": "lemma",
+      "module": "Paper.HypergraphSpace",
+      "file": "Paper/HypergraphSpace.lean"
+    },
+    {
+      "name": "Paper.HypergraphSpace.toAssemblySpace_ofAssemblySpace",
+      "kind": "lemma",
+      "module": "Paper.HypergraphSpace",
+      "file": "Paper/HypergraphSpace.lean"
+    },
+    {
+      "name": "Paper.HypergraphSpace.hyperIndex_ofAssemblySpace_eq",
+      "kind": "lemma",
+      "module": "Paper.HypergraphSpace",
+      "file": "Paper/HypergraphSpace.lean"
+    },
+    {
+      "name": "Paper.HypergraphSpace.toAssemblySpace",
+      "kind": "def",
+      "module": "Paper.HypergraphSpace",
+      "file": "Paper/HypergraphSpace.lean"
+    },
+    {
+      "name": "Paper.HypergraphSpace.HasHyperPathLen",
+      "kind": "def",
+      "module": "Paper.HypergraphSpace",
+      "file": "Paper/HypergraphSpace.lean"
+    },
+    {
+      "name": "Paper.HypergraphSpace.hyperIndex",
+      "kind": "def",
+      "module": "Paper.HypergraphSpace",
+      "file": "Paper/HypergraphSpace.lean"
+    },
+    {
+      "name": "Paper.HypergraphSpace.ofAssemblySpace",
+      "kind": "def",
+      "module": "Paper.HypergraphSpace",
+      "file": "Paper/HypergraphSpace.lean"
+    },
+    {
+      "name": "Paper.HypergraphSpace.Graph",
+      "kind": "structure",
+      "module": "Paper.HypergraphSpace",
+      "file": "Paper/HypergraphSpace.lean"
+    },
+    {
+      "name": "Paper.AssemblyBounds.size_base",
+      "kind": "lemma",
+      "module": "Paper.AssemblyBounds",
+      "file": "Paper/AssemblyBounds.lean"
+    },
+    {
+      "name": "Paper.AssemblyBounds.size_join",
+      "kind": "lemma",
+      "module": "Paper.AssemblyBounds",
+      "file": "Paper/AssemblyBounds.lean"
+    },
+    {
+      "name": "Paper.AssemblyBounds.size_pos",
+      "kind": "lemma",
+      "module": "Paper.AssemblyBounds",
+      "file": "Paper/AssemblyBounds.lean"
+    },
+    {
+      "name": "Paper.AssemblyBounds.size_eq_joinCount_add_one",
+      "kind": "lemma",
+      "module": "Paper.AssemblyBounds",
+      "file": "Paper/AssemblyBounds.lean"
+    },
+    {
+      "name": "Paper.AssemblyBounds.assemblyIndex_le_size_sub_one",
+      "kind": "lemma",
+      "module": "Paper.AssemblyBounds",
+      "file": "Paper/AssemblyBounds.lean"
+    },
+    {
+      "name": "Paper.AssemblyBounds.size_le_mul_pow_two_availableAfter",
+      "kind": "lemma",
+      "module": "Paper.AssemblyBounds",
+      "file": "Paper/AssemblyBounds.lean"
+    },
+    {
+      "name": "Paper.AssemblyBounds.size_le_pow_two_availableAfterU",
+      "kind": "lemma",
+      "module": "Paper.AssemblyBounds",
+      "file": "Paper/AssemblyBounds.lean"
+    },
+    {
+      "name": "Paper.AssemblyBounds.assemblyIndex_ge_log2",
+      "kind": "lemma",
+      "module": "Paper.AssemblyBounds",
+      "file": "Paper/AssemblyBounds.lean"
+    },
+    {
+      "name": "Paper.AssemblyBounds.dagJoinCount_bounds",
+      "kind": "lemma",
+      "module": "Paper.AssemblyBounds",
+      "file": "Paper/AssemblyBounds.lean"
+    },
+    {
+      "name": "Paper.AssemblyBounds.greedyIndex_ge_assemblyIndex",
+      "kind": "lemma",
+      "module": "Paper.AssemblyBounds",
+      "file": "Paper/AssemblyBounds.lean"
+    },
+    {
+      "name": "Paper.AssemblyBounds.size",
+      "kind": "def",
+      "module": "Paper.AssemblyBounds",
+      "file": "Paper/AssemblyBounds.lean"
+    },
+    {
+      "name": "Paper.AssemblyBounds.greedyIndex",
+      "kind": "def",
+      "module": "Paper.AssemblyBounds",
+      "file": "Paper/AssemblyBounds.lean"
+    },
+    {
+      "name": "Paper.MolecularSpace.evalIsoRel_refl",
+      "kind": "theorem",
+      "module": "Paper.MolecularSpace",
+      "file": "Paper/MolecularSpace.lean"
+    },
+    {
+      "name": "Paper.MolecularSpace.evalIsoRel_symm",
+      "kind": "theorem",
+      "module": "Paper.MolecularSpace",
+      "file": "Paper/MolecularSpace.lean"
+    },
+    {
+      "name": "Paper.MolecularSpace.evalIsoRel_trans",
+      "kind": "theorem",
+      "module": "Paper.MolecularSpace",
+      "file": "Paper/MolecularSpace.lean"
+    },
+    {
+      "name": "Paper.MolecularSpace.molIso_refl",
+      "kind": "lemma",
+      "module": "Paper.MolecularSpace",
+      "file": "Paper/MolecularSpace.lean"
+    },
+    {
+      "name": "Paper.MolecularSpace.molIso_symm",
+      "kind": "lemma",
+      "module": "Paper.MolecularSpace",
+      "file": "Paper/MolecularSpace.lean"
+    },
+    {
+      "name": "Paper.MolecularSpace.molIso_trans",
+      "kind": "lemma",
+      "module": "Paper.MolecularSpace",
+      "file": "Paper/MolecularSpace.lean"
+    },
+    {
+      "name": "Paper.MolecularSpace.assemblyIndex_syntax_eq_dagJoinCount",
+      "kind": "lemma",
+      "module": "Paper.MolecularSpace",
+      "file": "Paper/MolecularSpace.lean"
+    },
+    {
+      "name": "Paper.MolecularSpace.assemblyIndex_mol_le_dagJoinCount",
+      "kind": "lemma",
+      "module": "Paper.MolecularSpace",
+      "file": "Paper/MolecularSpace.lean"
+    },
+    {
+      "name": "Paper.MolecularSpace.MolIso",
+      "kind": "def",
+      "module": "Paper.MolecularSpace",
+      "file": "Paper/MolecularSpace.lean"
+    },
+    {
+      "name": "Paper.MolecularSpace.IsAtomVertex",
+      "kind": "def",
+      "module": "Paper.MolecularSpace",
+      "file": "Paper/MolecularSpace.lean"
+    },
+    {
+      "name": "Paper.MolecularSpace.IsBondVertex",
+      "kind": "def",
+      "module": "Paper.MolecularSpace",
+      "file": "Paper/MolecularSpace.lean"
+    },
+    {
+      "name": "Paper.MolecularSpace.disjointUnion",
+      "kind": "def",
+      "module": "Paper.MolecularSpace",
+      "file": "Paper/MolecularSpace.lean"
+    },
+    {
+      "name": "Paper.MolecularSpace.identify",
+      "kind": "def",
+      "module": "Paper.MolecularSpace",
+      "file": "Paper/MolecularSpace.lean"
+    },
+    {
+      "name": "Paper.MolecularSpace.IsJoinAtom",
+      "kind": "def",
+      "module": "Paper.MolecularSpace",
+      "file": "Paper/MolecularSpace.lean"
+    },
+    {
+      "name": "Paper.MolecularSpace.disjointUnion",
+      "kind": "def",
+      "module": "Paper.MolecularSpace",
+      "file": "Paper/MolecularSpace.lean"
+    },
+    {
+      "name": "Paper.MolecularSpace.join",
+      "kind": "def",
+      "module": "Paper.MolecularSpace",
+      "file": "Paper/MolecularSpace.lean"
+    },
+    {
+      "name": "Paper.MolecularSpace.evalBond",
+      "kind": "def",
+      "module": "Paper.MolecularSpace",
+      "file": "Paper/MolecularSpace.lean"
+    },
+    {
+      "name": "Paper.MolecularSpace.evalObj",
+      "kind": "def",
+      "module": "Paper.MolecularSpace",
+      "file": "Paper/MolecularSpace.lean"
+    },
+    {
+      "name": "Paper.MolecularSpace.evalCore",
+      "kind": "def",
+      "module": "Paper.MolecularSpace",
+      "file": "Paper/MolecularSpace.lean"
+    },
+    {
+      "name": "Paper.MolecularSpace.evalIsoRel",
+      "kind": "def",
+      "module": "Paper.MolecularSpace",
+      "file": "Paper/MolecularSpace.lean"
+    },
+    {
+      "name": "Paper.MolecularSpace.evalIsoSetoid",
+      "kind": "def",
+      "module": "Paper.MolecularSpace",
+      "file": "Paper/MolecularSpace.lean"
+    },
+    {
+      "name": "Paper.MolecularSpace.molSpace",
+      "kind": "def",
+      "module": "Paper.MolecularSpace",
+      "file": "Paper/MolecularSpace.lean"
+    },
+    {
+      "name": "Paper.MolecularSpace.closed",
+      "kind": "def",
+      "module": "Paper.MolecularSpace",
+      "file": "Paper/MolecularSpace.lean"
+    },
+    {
+      "name": "Paper.MolecularSpace.Bond",
+      "kind": "structure",
+      "module": "Paper.MolecularSpace",
+      "file": "Paper/MolecularSpace.lean"
+    },
+    {
+      "name": "Paper.MolecularSpace.MolGraph",
+      "kind": "structure",
+      "module": "Paper.MolecularSpace",
+      "file": "Paper/MolecularSpace.lean"
+    },
+    {
+      "name": "Paper.MolecularSpace.MolState",
+      "kind": "structure",
+      "module": "Paper.MolecularSpace",
+      "file": "Paper/MolecularSpace.lean"
+    },
+    {
+      "name": "Paper.MolecularSpace.as",
+      "kind": "instance",
+      "module": "Paper.MolecularSpace",
+      "file": "Paper/MolecularSpace.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.exists_len_of_closed",
+      "kind": "lemma",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.assemblyIndex_spec",
+      "kind": "lemma",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.assemblyIndex_le_of_hasLen",
+      "kind": "lemma",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.assemblyIndex_le_of_path",
+      "kind": "lemma",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.assemblyIndex_eq_zero_iff",
+      "kind": "lemma",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.mem_U_primitive",
+      "kind": "lemma",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.mem_availableAfter_of_mem_steps",
+      "kind": "lemma",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.reuseAwareSteps_z_not_mem",
+      "kind": "lemma",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.reuseAwareSteps_wf",
+      "kind": "lemma",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.joinCount_le_of_mem_subobjects",
+      "kind": "lemma",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.join_not_mem_subobjects_left",
+      "kind": "lemma",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.join_not_mem_subobjects_right",
+      "kind": "lemma",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.reuseAwareSteps_z_mem_subobjects",
+      "kind": "lemma",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.reuseAwareSteps_z_isJoin",
+      "kind": "lemma",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.reuseAwareSteps_nodup_z",
+      "kind": "lemma",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.reuseAwareSteps_len_le_dagJoinCount",
+      "kind": "lemma",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.closed",
+      "kind": "lemma",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.assemblyIndex_le_joinCount",
+      "kind": "lemma",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.assemblyIndex_le_dagJoinCount",
+      "kind": "lemma",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.join_not_mem_U",
+      "kind": "lemma",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.exists_step_of_mem_availableAfter",
+      "kind": "lemma",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.step_inputs_mem_availableAfter",
+      "kind": "lemma",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.join_components_mem_availableAfter",
+      "kind": "lemma",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.subobjects_mem_availableAfter_of_mem",
+      "kind": "lemma",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.join_subobj_mem_step_outputs",
+      "kind": "lemma",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.dagJoinCount_le_path_len",
+      "kind": "lemma",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.assemblyIndex_eq_dagJoinCount",
+      "kind": "lemma",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.HasPathLen",
+      "kind": "def",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.assemblyIndex",
+      "kind": "def",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.space",
+      "kind": "def",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.primitive",
+      "kind": "def",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.canonicalSteps",
+      "kind": "def",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.canonicalPath",
+      "kind": "def",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.reuseAwareSteps",
+      "kind": "def",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblyIndex.reuseAwarePath",
+      "kind": "def",
+      "module": "Paper.AssemblyIndex",
+      "file": "Paper/AssemblyIndex.lean"
+    },
+    {
+      "name": "Paper.AssemblySpace.AssemblySpace",
+      "kind": "structure",
+      "module": "Paper.AssemblySpace",
+      "file": "Paper/AssemblySpace.lean"
+    },
+    {
+      "name": "Paper.StringPermSpace.mem_U_nil",
+      "kind": "lemma",
+      "module": "Paper.StringPermSpace",
+      "file": "Paper/StringPermSpace.lean"
+    },
+    {
+      "name": "Paper.StringPermSpace.mem_U_singleton",
+      "kind": "lemma",
+      "module": "Paper.StringPermSpace",
+      "file": "Paper/StringPermSpace.lean"
+    },
+    {
+      "name": "Paper.StringPermSpace.mem_U_nil",
+      "kind": "lemma",
+      "module": "Paper.StringPermSpace",
+      "file": "Paper/StringPermSpace.lean"
+    },
+    {
+      "name": "Paper.StringPermSpace.mem_U_singleton",
+      "kind": "lemma",
+      "module": "Paper.StringPermSpace",
+      "file": "Paper/StringPermSpace.lean"
+    },
+    {
+      "name": "Paper.StringPermSpace.flatten_base",
+      "kind": "lemma",
+      "module": "Paper.StringPermSpace",
+      "file": "Paper/StringPermSpace.lean"
+    },
+    {
+      "name": "Paper.StringPermSpace.flatten_join",
+      "kind": "lemma",
+      "module": "Paper.StringPermSpace",
+      "file": "Paper/StringPermSpace.lean"
+    },
+    {
+      "name": "Paper.StringPermSpace.map_wf_aux",
+      "kind": "lemma",
+      "module": "Paper.StringPermSpace",
+      "file": "Paper/StringPermSpace.lean"
+    },
+    {
+      "name": "Paper.StringPermSpace.map_wf",
+      "kind": "lemma",
+      "module": "Paper.StringPermSpace",
+      "file": "Paper/StringPermSpace.lean"
+    },
+    {
+      "name": "Paper.StringPermSpace.map_ok_out",
+      "kind": "lemma",
+      "module": "Paper.StringPermSpace",
+      "file": "Paper/StringPermSpace.lean"
+    },
+    {
+      "name": "Paper.StringPermSpace.assemblyIndex_flatten_le_dagJoinCount",
+      "kind": "lemma",
+      "module": "Paper.StringPermSpace",
+      "file": "Paper/StringPermSpace.lean"
+    },
+    {
+      "name": "Paper.StringPermSpace.spaceRules",
+      "kind": "def",
+      "module": "Paper.StringPermSpace",
+      "file": "Paper/StringPermSpace.lean"
+    },
+    {
+      "name": "Paper.StringPermSpace.space",
+      "kind": "def",
+      "module": "Paper.StringPermSpace",
+      "file": "Paper/StringPermSpace.lean"
+    },
+    {
+      "name": "Paper.StringPermSpace.closed_of_total",
+      "kind": "def",
+      "module": "Paper.StringPermSpace",
+      "file": "Paper/StringPermSpace.lean"
+    },
+    {
+      "name": "Paper.StringPermSpace.closed",
+      "kind": "def",
+      "module": "Paper.StringPermSpace",
+      "file": "Paper/StringPermSpace.lean"
+    },
+    {
+      "name": "Paper.StringPermSpace.flatten",
+      "kind": "def",
+      "module": "Paper.StringPermSpace",
+      "file": "Paper/StringPermSpace.lean"
+    },
+    {
+      "name": "Paper.StringPermSpace.mapStep",
+      "kind": "def",
+      "module": "Paper.StringPermSpace",
+      "file": "Paper/StringPermSpace.lean"
+    },
+    {
+      "name": "Paper.StringPermSpace.mapPath",
+      "kind": "def",
+      "module": "Paper.StringPermSpace",
+      "file": "Paper/StringPermSpace.lean"
+    },
+    {
+      "name": "Paper.AssemblyQuotient.mk_mem_U",
+      "kind": "lemma",
+      "module": "Paper.AssemblyQuotient",
+      "file": "Paper/AssemblyQuotient.lean"
+    },
+    {
+      "name": "Paper.AssemblyQuotient.map_wf_aux",
+      "kind": "lemma",
+      "module": "Paper.AssemblyQuotient",
+      "file": "Paper/AssemblyQuotient.lean"
+    },
+    {
+      "name": "Paper.AssemblyQuotient.map_wf",
+      "kind": "lemma",
+      "module": "Paper.AssemblyQuotient",
+      "file": "Paper/AssemblyQuotient.lean"
+    },
+    {
+      "name": "Paper.AssemblyQuotient.map_ok_out",
+      "kind": "lemma",
+      "module": "Paper.AssemblyQuotient",
+      "file": "Paper/AssemblyQuotient.lean"
+    },
+    {
+      "name": "Paper.AssemblyQuotient.assemblyIndex_quotient_le",
+      "kind": "lemma",
+      "module": "Paper.AssemblyQuotient",
+      "file": "Paper/AssemblyQuotient.lean"
+    },
+    {
+      "name": "Paper.AssemblyQuotient.quotient",
+      "kind": "def",
+      "module": "Paper.AssemblyQuotient",
+      "file": "Paper/AssemblyQuotient.lean"
+    },
+    {
+      "name": "Paper.AssemblyQuotient.liftSet",
+      "kind": "def",
+      "module": "Paper.AssemblyQuotient",
+      "file": "Paper/AssemblyQuotient.lean"
+    },
+    {
+      "name": "Paper.AssemblyQuotient.mapStep",
+      "kind": "def",
+      "module": "Paper.AssemblyQuotient",
+      "file": "Paper/AssemblyQuotient.lean"
+    },
+    {
+      "name": "Paper.AssemblyQuotient.mapPath",
+      "kind": "def",
+      "module": "Paper.AssemblyQuotient",
+      "file": "Paper/AssemblyQuotient.lean"
+    },
+    {
+      "name": "Paper.AssemblyQuotient.quotient",
+      "kind": "def",
+      "module": "Paper.AssemblyQuotient",
+      "file": "Paper/AssemblyQuotient.lean"
+    },
+    {
+      "name": "Paper.AssemblyPath.wellFormedFrom_nil",
+      "kind": "lemma",
+      "module": "Paper.AssemblyPath",
+      "file": "Paper/AssemblyPath.lean"
+    },
+    {
+      "name": "Paper.AssemblyPath.availableAfter_nil",
+      "kind": "lemma",
+      "module": "Paper.AssemblyPath",
+      "file": "Paper/AssemblyPath.lean"
+    },
+    {
+      "name": "Paper.AssemblyPath.availableAfter_cons",
+      "kind": "lemma",
+      "module": "Paper.AssemblyPath",
+      "file": "Paper/AssemblyPath.lean"
+    },
+    {
+      "name": "Paper.AssemblyPath.wellFormedFrom_append",
+      "kind": "lemma",
+      "module": "Paper.AssemblyPath",
+      "file": "Paper/AssemblyPath.lean"
+    },
+    {
+      "name": "Paper.AssemblyPath.wellFormedFrom_mono",
+      "kind": "lemma",
+      "module": "Paper.AssemblyPath",
+      "file": "Paper/AssemblyPath.lean"
+    },
+    {
+      "name": "Paper.AssemblyPath.availableAfter_append",
+      "kind": "lemma",
+      "module": "Paper.AssemblyPath",
+      "file": "Paper/AssemblyPath.lean"
+    },
+    {
+      "name": "Paper.AssemblyPath.subset_availableAfter",
+      "kind": "lemma",
+      "module": "Paper.AssemblyPath",
+      "file": "Paper/AssemblyPath.lean"
+    },
+    {
+      "name": "Paper.AssemblyPath.availableAfter_mono",
+      "kind": "lemma",
+      "module": "Paper.AssemblyPath",
+      "file": "Paper/AssemblyPath.lean"
+    },
+    {
+      "name": "Paper.AssemblyPath.mem_availableAfter_of_getLast",
+      "kind": "lemma",
+      "module": "Paper.AssemblyPath",
+      "file": "Paper/AssemblyPath.lean"
+    },
+    {
+      "name": "Paper.AssemblyPath.len_mk",
+      "kind": "lemma",
+      "module": "Paper.AssemblyPath",
+      "file": "Paper/AssemblyPath.lean"
+    },
+    {
+      "name": "Paper.AssemblyPath.primitive_len",
+      "kind": "lemma",
+      "module": "Paper.AssemblyPath",
+      "file": "Paper/AssemblyPath.lean"
+    },
+    {
+      "name": "Paper.AssemblyPath.mem_availableAfter",
+      "kind": "lemma",
+      "module": "Paper.AssemblyPath",
+      "file": "Paper/AssemblyPath.lean"
+    },
+    {
+      "name": "Paper.AssemblyPath.Step",
+      "kind": "def",
+      "module": "Paper.AssemblyPath",
+      "file": "Paper/AssemblyPath.lean"
+    },
+    {
+      "name": "Paper.AssemblyPath.WellFormedFrom",
+      "kind": "def",
+      "module": "Paper.AssemblyPath",
+      "file": "Paper/AssemblyPath.lean"
+    },
+    {
+      "name": "Paper.AssemblyPath.availableAfter",
+      "kind": "def",
+      "module": "Paper.AssemblyPath",
+      "file": "Paper/AssemblyPath.lean"
+    },
+    {
+      "name": "Paper.AssemblyPath.len",
+      "kind": "def",
+      "module": "Paper.AssemblyPath",
+      "file": "Paper/AssemblyPath.lean"
+    },
+    {
+      "name": "Paper.AssemblyPath.primitive",
+      "kind": "def",
+      "module": "Paper.AssemblyPath",
+      "file": "Paper/AssemblyPath.lean"
+    },
+    {
+      "name": "Paper.AssemblyPath.Step",
+      "kind": "structure",
+      "module": "Paper.AssemblyPath",
+      "file": "Paper/AssemblyPath.lean"
+    },
+    {
+      "name": "Paper.AssemblyPath.AssemblyPath",
+      "kind": "structure",
+      "module": "Paper.AssemblyPath",
+      "file": "Paper/AssemblyPath.lean"
+    },
+    {
+      "name": "Paper.AssemblyPath.Closed",
+      "kind": "structure",
+      "module": "Paper.AssemblyPath",
+      "file": "Paper/AssemblyPath.lean"
+    }
+  ]
+}
