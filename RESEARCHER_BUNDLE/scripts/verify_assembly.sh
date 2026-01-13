@@ -4,12 +4,13 @@
 # Usage: ./scripts/verify_assembly.sh
 #
 # This script:
-# 1. Checks for forbidden markers (sorry, admit)
-# 2. Runs strict build with warnings as errors
-# 3. Prints axiom dependencies
-# 4. Generates checksums
+# 1. Checks prerequisites (lake, lean)
+# 2. Checks for forbidden markers (sorry, admit)
+# 3. Runs strict build with warnings as errors
+# 4. Prints axiom dependencies
+# 5. Generates checksums
 
-set -e
+set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 BUNDLE_DIR="$(dirname "$SCRIPT_DIR")"
@@ -26,6 +27,14 @@ echo " Assembly Theory Formalization Verification"
 echo "=============================================="
 echo ""
 
+# Check prerequisites
+for cmd in grep tee sort find; do
+  command -v "$cmd" >/dev/null 2>&1 || { echo -e "${RED}FAILED: missing '$cmd'${NC}"; exit 1; }
+done
+
+command -v lake >/dev/null 2>&1 || { echo -e "${RED}FAILED: 'lake' not found. Install Lean via elan.${NC}"; exit 1; }
+command -v lean >/dev/null 2>&1 || { echo -e "${RED}FAILED: 'lean' not found. Install Lean via elan.${NC}"; exit 1; }
+
 mkdir -p "$REPORTS_DIR"
 
 # Step 1: Guard check for sorry/admit
@@ -37,33 +46,17 @@ fi
 echo -e "${GREEN}PASSED: No sorry or admit found${NC}"
 echo ""
 
-# Step 2: Strict build
+# Step 2: Strict build (pipefail ensures lake failures are caught)
 echo -e "${YELLOW}[2/4] Running strict build...${NC}"
 cd "$BUNDLE_DIR"
 
-# Capture build output
-if lake build -- -DwarningAsError=true 2>&1 | tee "$REPORTS_DIR/BUILD_TRANSCRIPT.txt"; then
-    echo -e "${GREEN}PASSED: Build completed successfully${NC}"
-else
-    echo -e "${RED}FAILED: Build errors occurred${NC}"
-    exit 1
-fi
+lake build -- -DwarningAsError=true 2>&1 | tee "$REPORTS_DIR/BUILD_TRANSCRIPT.txt"
+echo -e "${GREEN}PASSED: Build completed successfully${NC}"
 echo ""
 
-# Step 3: Axiom audit
+# Step 3: Axiom audit (using committed script, not /tmp)
 echo -e "${YELLOW}[3/4] Auditing axioms...${NC}"
-cat > /tmp/print_axioms.lean << 'EOF'
-import HeytingLean.ATheory.Paper.AssemblyBounds
-import HeytingLean.ATheory.Paper.MolecularSpace
-import HeytingLean.ATheory.Paper.HypergraphSpace
-import HeytingLean.ATheory.CopyNumberSelection
-
-#print axioms HeytingLean.ATheory.Paper.AssemblyBounds.dagJoinCount_bounds
-#print axioms HeytingLean.ATheory.Paper.ObjSyntax.space.assemblyIndex_eq_dagJoinCount
-#print axioms HeytingLean.ATheory.Paper.Molecular.assemblyIndex_mol_le_dagJoinCount
-EOF
-
-lake env lean /tmp/print_axioms.lean 2>&1 | tee "$REPORTS_DIR/AXIOMS_PRINT.txt" || true
+lake env lean "$SCRIPT_DIR/print_axioms.lean" 2>&1 | tee "$REPORTS_DIR/AXIOMS_PRINT.txt"
 echo -e "${GREEN}Axiom audit complete${NC}"
 echo ""
 

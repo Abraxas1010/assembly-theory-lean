@@ -179,7 +179,7 @@ end Path
 
 For now this path does not depend on the rule set `R` and simply records the
 object once; its length is taken to be the structural join-count. This makes
-`assemblyIndex` path-based while remaining lightweight. -/
+`syntacticIndex` path-based while remaining lightweight. -/
 def canonicalPath {α : Type u} [DecidableEq α] (R : Rules α) (o : Obj α) : Path α R o where
   nodes := [o]
   wellFormed := by
@@ -188,17 +188,26 @@ def canonicalPath {α : Type u} [DecidableEq α] (R : Rules α) (o : Obj α) : P
     simp [List.zip, List.tail] at hmem
   len   := Obj.dagJoinCount o
 
-/-- Assembly index defined as the length of a canonical assembly path.
+/-- **Syntactic index**: the length of a canonical assembly path built from syntax.
 
-Later phases can refine `canonicalPath` and its `ok` predicate so that this
-index coincides with the minimal length of a valid assembly pathway. -/
-def assemblyIndex {α : Type u} [DecidableEq α] (R : Rules α) (o : Obj α) : Nat :=
+**WARNING**: This is NOT the abstract assembly index (which is defined as the
+minimum over all valid assembly paths via `Nat.find` in `Paper.AssemblyIndex`).
+This is a computable upper bound equal to `Obj.dagJoinCount`.
+
+For the paper-facing min-over-paths definition, see:
+`HeytingLean.ATheory.Paper.AssemblySpace.AssemblyIndex.assemblyIndex` -/
+def syntacticIndex {α : Type u} [DecidableEq α] (R : Rules α) (o : Obj α) : Nat :=
   (canonicalPath (R := R) o).len
 
-/-- Alias exposing the assembly index as the “birth-time” of an object in the
+/-- Deprecated alias for `syntacticIndex`. Prefer `syntacticIndex` for clarity. -/
+@[deprecated syntacticIndex (since := "2026-01-13")]
+def assemblyIndex {α : Type u} [DecidableEq α] (R : Rules α) (o : Obj α) : Nat :=
+  syntacticIndex R o
+
+/-- Alias exposing the syntactic index as the "birth-time" of an object in the
 Assembly Theory layer. -/
 def birthAT {α : Type u} [DecidableEq α] (R : Rules α) (o : Obj α) : Nat :=
-  assemblyIndex R o
+  syntacticIndex R o
 
 end ATheory
 end HeytingLean

@@ -41,7 +41,7 @@ rg "\b(sorry|admit)\b" --type lean HeytingLean/
 ### 4. Axiom Audit
 
 ```bash
-lake env lean --run scripts/print_axioms.lean
+lake env lean scripts/print_axioms.lean
 ```
 
 Expected axioms (standard Lean kernel only):
@@ -99,10 +99,12 @@ For CI systems, use:
 
 ```bash
 #!/bin/bash
-set -e
+set -euo pipefail
+cd RESEARCHER_BUNDLE
 lake update
 ./scripts/guard_no_sorry.sh
 lake build -- -DwarningAsError=true
+lake env lean scripts/print_axioms.lean
 ```
 
 ## Checksum Verification

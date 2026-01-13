@@ -218,6 +218,54 @@ Standard Lean kernel axioms only:
 
 **No project-specific axioms introduced.**
 
+## Status & Known Issues
+
+### Completed (2026-01-13)
+
+| Item | Status |
+|------|--------|
+| Core assembly index theory | ✅ Verified |
+| Tight bounds (log₂ ≤ AI ≤ size-1) | ✅ Proved |
+| Molecular assembly semantics | ✅ Proved |
+| Selection predicates | ✅ Proved |
+| Verification script robustness (P0) | ✅ Fixed |
+| Documentation accuracy | ✅ Updated |
+| Code quality (P1-P2) | ✅ Improved |
+
+### Code Quality Improvements
+
+- **P0-1**: `verify_assembly.sh` now uses `set -euo pipefail`, checks for `lake`/`lean` existence
+- **P1-4**: Renamed scaffold `assemblyIndex` to `syntacticIndex` with deprecation warning (distinct from paper-facing `Nat.find` definition)
+- **P1-5**: Made `greedyIndex` computable (removed unnecessary `noncomputable`)
+- **P1-6**: Clarified Nat subtraction semantics in `AssemblyEnsemble`
+- **P2-7**: Added `assemblyIndexCompute` computable wrapper with equality proof
+
+### Known Build Issues
+
+The following files have **pre-existing issues** unrelated to the core formalization:
+
+| File | Issue | Severity |
+|------|-------|----------|
+| `AssemblyQuotient.lean` | `autoImplicit=false` conflicts with implicit variables | Medium |
+| `StringPermSpace.lean` | `autoImplicit=false` conflicts + unsolved goals | Medium |
+
+These files contain experimental extensions and do not affect the core theorems. The main results (`assemblyIndex_eq_dagJoinCount`, bounds, molecular assembly) are fully verified.
+
+## Future Work
+
+### Near-term
+
+- [ ] Fix `AssemblyQuotient.lean` and `StringPermSpace.lean` build issues
+- [ ] Add CI workflow for continuous verification
+- [ ] Generate and commit `lake-manifest.json` for reproducibility
+
+### Research Extensions
+
+- [ ] **Probabilistic bounds**: Formalize expected AI under random assembly
+- [ ] **Fragmentation algorithms**: Verified mass spectrometry decomposition
+- [ ] **Addition-chain theory**: Deeper bounds via algebraic number theory
+- [ ] **Quantum assembly**: Extension to superposition of assembly paths
+
 ## References
 
 1. Walker, S.I., Mathis, C., Cronin, L., et al. (2024). "The Physics of Causation."

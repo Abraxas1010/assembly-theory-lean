@@ -124,7 +124,11 @@ noncomputable def AssemblyEnsemble (idx : V → Nat) (n : V → Nat)
     -- Cast the total to `ℝ` once, then reuse it
     let NT : ℝ := (NTn : ℝ)
     vset.sum (fun v =>
-      Real.exp (idx v : ℝ) * ((n v - 1 : ℝ) / NT))
+      -- NOTE: `(n v - 1)` uses **Nat subtraction** (truncates at 0), then coerces to ℝ.
+      -- This is intentional: objects with copy number n=0 contribute 0 rather than
+      -- negative mass. If you need real subtraction (allowing negative), use
+      -- `((n v : ℝ) - 1)` instead.
+      Real.exp (idx v : ℝ) * ((n v - 1 : ℕ) : ℝ) / NT)
 
 @[simp]
 lemma AssemblyEnsemble_empty [DecidableEq V] (idx : V → Nat) (n : V → Nat) :

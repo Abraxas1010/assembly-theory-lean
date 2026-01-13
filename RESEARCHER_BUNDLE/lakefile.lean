@@ -12,8 +12,5 @@ require mathlib from git
 
 @[default_target]
 lean_lib HeytingLean where
-  roots := #[`HeytingLean.ATheory.Paper.AssemblyBounds,
-             `HeytingLean.ATheory.Paper.MolecularSpace,
-             `HeytingLean.ATheory.Paper.HypergraphSpace,
-             `HeytingLean.ATheory.Paper.StringPermSpace,
-             `HeytingLean.ATheory.CopyNumberSelection]
+  -- Build all modules under HeytingLean (no explicit roots = auto-discover)
+  globs := #[.submodules `HeytingLean]

@@ -203,7 +203,12 @@ lemma dagJoinCount_bounds [DecidableEq α] (o : Obj α) (ho : Obj.size o > 1) :
 
 /-! ## Conservative approximation -/
 
-noncomputable def greedyIndex [DecidableEq α] (o : Obj α) : Nat :=
+/-- A computable upper bound on assembly index, equal to `Obj.dagJoinCount`.
+
+This is NOT a "greedy" algorithm in the algorithmic sense; it simply computes
+the reuse-aware join count of the syntax tree. The name reflects that this
+is a conservative (non-tight) approximation. -/
+def greedyIndex [DecidableEq α] (o : Obj α) : Nat :=
   Obj.dagJoinCount o
 
 lemma greedyIndex_ge_assemblyIndex [DecidableEq α] (o : Obj α) :
@@ -212,6 +217,24 @@ lemma greedyIndex_ge_assemblyIndex [DecidableEq α] (o : Obj α) :
         (hC := ObjSyntax.space.closed (Atom := α)) o
       ≤ greedyIndex (α := α) o := by
   simp [greedyIndex, ObjSyntax.space.assemblyIndex_eq_dagJoinCount (Atom := α) (o := o)]
+
+/-! ## Computable API for assembly index -/
+
+/-- Computable assembly index for syntax-tree objects.
+
+Although the abstract `AssemblyIndex.assemblyIndex` is noncomputable (defined via
+`Nat.find`), we have proved that in the syntax-tree space it equals `Obj.dagJoinCount`.
+This definition provides a fast, evaluable interface. -/
+def assemblyIndexCompute [DecidableEq α] (o : Obj α) : Nat :=
+  Obj.dagJoinCount o
+
+/-- The computable assembly index equals the abstract one in the syntax-tree space. -/
+theorem assemblyIndex_eq_compute [DecidableEq α] (o : Obj α) :
+    AssemblySpace.AssemblyIndex.assemblyIndex
+        (S := ObjSyntax.space (Atom := α))
+        (hC := ObjSyntax.space.closed (Atom := α)) o
+      = assemblyIndexCompute (α := α) o := by
+  simp [assemblyIndexCompute, ObjSyntax.space.assemblyIndex_eq_dagJoinCount (Atom := α) (o := o)]
 
 end AssemblyBounds
 
